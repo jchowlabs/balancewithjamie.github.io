@@ -103,11 +103,11 @@ p {
     font-weight: normal;
 }
 
-.profile-image-placeholder {
+.profile-image {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 300px;
+    border-radius: 50%; /* For a circular profile image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-placeholder {
