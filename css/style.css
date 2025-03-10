@@ -66,11 +66,12 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
-    justify-content: space-between;
+    gap: 2%;  /* Add gap between columns */
+    padding: 0 20px;  /* Add padding to prevent content touching edges */
 }
 
 .left-column, .right-column {
-    width: 48%;
+    width: 49%;  /* Adjusted from 48% to work with the gap */
     padding: 20px;
 }
 
@@ -103,27 +104,38 @@ p {
     font-weight: normal;
 }
 
-.profile-image {
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1/1;  /* Ensures the image is square */
-    object-fit: cover;  /* Maintains aspect ratio while filling the square */
-    border-radius: 50%;  /* Makes it perfectly circular */
-    border: 3px solid #f7f3e9;  /* Subtle border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-    transition: transform 0.3s ease;  /* Smooth hover effect */
-}
-
-.profile-image:hover {
-    transform: scale(1.02);  /* Slightly grow on hover */
+/* Profile image container positioning */
+.profile-image-placeholder {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    width: 49%;              /* Match the width of left column */
 }
 
 .image-placeholder {
     padding: 8px;
-    background-color: #ffffff;  /* Optional: white background behind image */
-    border-radius: 50%;  /* Match the image's circular shape */
+    background-color: #ffffff;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
+    width: 100%;           /* Take full width of container */
+    max-width: 320px;      /* Limit maximum width */
+    margin: 0 auto;        /* Center the container */
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f7f3e9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.02);
 }
 
 .image-placeholder svg {

@@ -1,188 +1,122 @@
+/* Mobile styles */
 @media (max-width: 768px) {
     section {
-        padding: 40px 15px;
+        padding: 50px 15px;
     }
-
+    
     .two-column {
         flex-direction: column;
+        gap: 20px;
     }
     
-    .left-column, .right-column {
+    .left-column, .profile-image-placeholder {
         width: 100%;
-        padding: 15px 10px;
-    }
-    
-    .left-column {
-        margin-bottom: 20px;
+        padding: 10px;
     }
     
     .name {
-        font-size: 3.2rem;
-        letter-spacing: 2px;
-        margin-bottom: 15px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
     }
     
     .title {
         font-size: 1rem;
     }
     
+    .profile-image {
+        max-width: 250px;
+    }
+    
     .image-placeholder {
-        width: 220px;
-        height: 220px;
-    }
-    
-    .acronym-header {
-        font-size: 2.5rem;
-        margin-bottom: 0;
-    }
-    
-    .separator {
-        font-size: 2rem;
-        margin: 0 0 3px;
-    }
-    
-    .tagline {
-        font-size: 1.5rem;
-        margin-bottom: 25px;
-    }
-    
-    .paragraphs p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .book-call-btn {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
-    
-    .image-placeholder-rect {
-        width: 100%;
-        max-width: 215px;
-        height: 120px;
-    }
-    
-    .program-header {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
-    
-    .program-list li {
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-    }
-    
-    .section-header {
-        font-size: 2.2rem;
-        margin-bottom: 30px;
-    }
-    
-    .tracks-container {
-        flex-direction: column;
-        margin: 30px 0 40px;
-    }
-    
-    .track {
-        width: 100%;
-        padding: 25px 20px;
-        margin-bottom: 30px;
-    }
-    
-    .track:last-child {
-        margin-bottom: 0;
-    }
-    
-    .track-title {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .track-list li {
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-    }
-    
-    .testimonials-container {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-    
-    .testimonial {
-        padding: 30px 20px 20px;
-    }
-    
-    .testimonial-text {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    section {
-        padding: 50px 25px;
-    }
-    
-    .name {
-        font-size: 4.5rem;
-        white-space: nowrap;
+        max-width: 250px;
     }
     
     .acronym-header {
         font-size: 3rem;
-        margin-bottom: 0;
     }
     
     .separator {
-        font-size: 2.2rem;
-        margin: 0 0 4px;
+        font-size: 2.5rem;
     }
     
     .tagline {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     
-    .image-placeholder-rect {
-        width: 300px;
-        height: 170px;
+    .paragraphs p {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
+    .program-header {
+        font-size: 1.8rem;
     }
     
     .section-header {
         font-size: 2.5rem;
     }
     
+    .tracks-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
     .track {
-        padding: 25px;
+        width: 100%;
     }
     
-    .track-title {
-        font-size: 1.6rem;
+    .testimonials-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .name {
+        font-size: 4.5rem;
     }
     
-    .track-list li {
-        font-size: 1rem;
+    .tracks-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .track {
+        width: 80%;
     }
     
     .testimonials-container {
         grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
-    
-    .testimonial:last-child {
-        grid-column: span 2;
-        max-width: 80%;
-        margin: 0 auto;
     }
 }
 
-@media (min-width: 1025px) {
-    section {
-        padding: 60px 30px;
+/* Large screen adjustments */
+@media (min-width: 1440px) {
+    .two-column {
+        max-width: 1400px;
     }
     
+    .section-content {
+        max-width: 1300px;
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
     .name {
-        font-size: 5.8rem;
+        font-size: 3rem;
+    }
+    
+    .acronym-header {
+        font-size: 2.5rem;
+    }
+    
+    .separator {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1.3rem;
     }
 }
