@@ -10,6 +10,15 @@
     .image-placeholder {
         max-width: 430px;
     }
+    
+    /* Adjusted flipbook size for large screens */
+    .flipbook-container {
+        width: 300px;
+    }
+    
+    .flipbook {
+        height: 400px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -34,6 +43,67 @@
     
     .image-placeholder {
         max-width: 380px;
+    }
+    
+    /* Adjusted header size for smaller screens */
+    .section-header {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .acronym-header {
+        font-size: 2.7rem;
+    }
+    
+    .tagline {
+        font-size: 1.4rem;
+    }
+    
+    /* Freebie container responsive adjustment */
+    .freebie-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding-top: 30px;
+    }
+    
+    .ebook-cover, .ebook-description {
+        width: 100%;
+    }
+    
+    .ebook-cover {
+        max-width: 330px; /* Maintain larger flipbook size */
+        margin: 0 auto;
+    }
+    
+    .ebook-description {
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .email-form {
+        margin: 35px auto 0;
+    }
+    
+    .ebook-title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    /* Adjusted flipbook size for tablet */
+    .flipbook-container {
+        width: 285px;
+    }
+    
+    .flipbook {
+        height: 380px;
+    }
+    
+    /* Adjust nav arrows size */
+    .nav-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
     }
 }
 
@@ -69,8 +139,9 @@
         max-width: 320px;
     }
     
+    /* Further reduced header size for mobile */
     .acronym-header {
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
     
     .separator {
@@ -78,7 +149,12 @@
     }
     
     .tagline {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .section-header {
+        font-size: 1.85rem;
+        margin-bottom: 25px;
     }
     
     .paragraphs p {
@@ -86,54 +162,59 @@
         text-align: left;
     }
     
-    .program-header {
-        font-size: 1.8rem;
-    }
-    
-    .section-header {
-        font-size: 2.5rem;
-    }
-    
-    .tracks-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .track {
-        width: 100%;
-    }
-    
-    .testimonials-container {
-        grid-template-columns: 1fr;
-    }
-    
     .acronym-container {
         padding: 20px;
         max-width: 95%;
     }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .name {
-        font-size: 4rem;
+    
+    .resources-header-container {
+        padding: 20px;
+        max-width: 95%;
     }
     
-    .tracks-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+    .freebie-container {
+        padding-top: 20px;
     }
     
-    .track {
-        width: 80%;
+    .ebook-title {
+        font-size: 1.7rem;
+        margin-bottom: 22px;
     }
     
-    .testimonials-container {
-        grid-template-columns: repeat(2, 1fr);
+    .ebook-text {
+        font-size: 1rem;
+        margin-bottom: 22px;
     }
     
-    .acronym-container {
-        padding: 25px 30px;
+    .email-form {
+        gap: 12px;
+        margin-top: 30px;
+    }
+    
+    .download-btn, .email-input {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Enhanced mobile flipbook experience */
+    .flipbook-container {
+        width: 260px;
+    }
+    
+    .flipbook {
+        height: 347px;
+    }
+    
+    .nav-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+        background-color: rgba(117, 20, 124, 0.9);
+    }
+    
+    .page-dots .dot {
+        width: 9px;
+        height: 9px;
     }
 }
 
@@ -142,8 +223,9 @@
         font-size: 2.8rem;
     }
     
+    /* Further reduced header size for small mobile */
     .acronym-header {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .separator {
@@ -151,7 +233,12 @@
     }
     
     .tagline {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .section-header {
+        font-size: 1.7rem;
+        margin-bottom: 20px;
     }
     
     .profile-image {
@@ -164,6 +251,58 @@
     
     .acronym-container {
         padding: 15px;
+    }
+    
+    .resources-header-container {
+        padding: 15px;
+    }
+    
+    .ebook-title {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    .ebook-text {
+        margin-bottom: 20px;
+    }
+    
+    .email-form {
+        gap: 10px;
+        margin-top: 25px;
+    }
+    
+    .download-btn, .email-input {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Adjusted flipbook size for small mobile */
+    .flipbook-container {
+        width: 240px;
+    }
+    
+    .flipbook {
+        height: 320px;
+    }
+    
+    .nav-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+    
+    .prev-arrow {
+        left: 5px;
+    }
+    
+    .next-arrow {
+        right: 5px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
     }
 }
 
