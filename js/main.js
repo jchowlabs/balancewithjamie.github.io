@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Here you would typically send the email to your server or service
                 // For now, we'll just show a success message
-                emailForm.innerHTML = '<p class="success-message">Thank you! Your guide has been sent to your email.</p>';
+                emailForm.innerHTML = '<p class="success-message">Thank you! Your freebie has been emailed to you!</p>';
             });
         }
     }
