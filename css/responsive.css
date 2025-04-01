@@ -4,19 +4,34 @@
     }
     
     .profile-image {
-        max-width: 400px;
+        max-width: 100%;
     }
     
     .image-placeholder {
-        max-width: 430px;
+        max-width: 420px;
     }
     
-    /* Adjusted header size to be 10% larger than before */
+    .image-container {
+        max-width: 460px;
+        padding: 25px 0;
+    }
+    
+    .decorative-square {
+        transform: rotate(2.5deg);
+    }
+    
+    .image-middle {
+        transform: rotate(-1.5deg);
+    }
+    
     .acronym-header {
-        font-size: 3.0rem; /* Adjusted proportionally */
+        font-size: 3.0rem;
     }
     
-    /* Adjusted flipbook size for large screens */
+    .tagline {
+        font-size: 1.46rem;
+    }
+    
     .flipbook-container {
         width: 300px;
     }
@@ -42,34 +57,40 @@
         margin-bottom: 20px;
     }
     
-    .profile-image {
-        max-width: 350px;
-    }
-    
     .image-placeholder {
         max-width: 380px;
     }
     
-    /* Adjusted header size for smaller screens - keeping the 10% increase */
+    .image-container {
+        max-width: 420px;
+        padding: 20px 0;
+    }
+    
+    .decorative-square {
+        transform: rotate(2deg);
+    }
+    
+    .image-middle {
+        transform: rotate(-1deg);
+    }
+    
     .section-header {
         font-size: 2rem;
         margin-bottom: 30px;
     }
     
     .acronym-header {
-        font-size: 3.0rem; /* Adjusted from 2.7rem to maintain the 10% increase */
+        font-size: 3.0rem;
     }
     
     .tagline {
         font-size: 1.46rem;
     }
     
-    /* Adjusted paragraph text */
     .paragraphs p {
-        font-size: 1.05rem; /* Decreased proportionally */
+        font-size: 1.05rem;
     }
     
-    /* Freebie container responsive adjustment */
     .freebie-container {
         flex-direction: column-reverse;
         gap: 30px;
@@ -81,7 +102,7 @@
     }
     
     .ebook-cover {
-        max-width: 330px; /* Maintain larger flipbook size */
+        max-width: 330px;
         margin: 0 auto;
     }
     
@@ -100,7 +121,6 @@
         margin-bottom: 25px;
     }
     
-    /* Adjusted flipbook size for tablet */
     .flipbook-container {
         width: 285px;
     }
@@ -109,7 +129,6 @@
         height: 380px;
     }
     
-    /* Adjust nav arrows size */
     .nav-arrow {
         width: 38px;
         height: 38px;
@@ -141,17 +160,25 @@
         font-size: 1rem;
     }
     
-    .profile-image {
-        max-width: 300px;
-    }
-    
     .image-placeholder {
         max-width: 320px;
     }
     
-    /* Adjusted header size for mobile - maintaining the 10% increase */
+    .image-container {
+        max-width: 350px;
+        padding: 15px 0;
+    }
+    
+    .decorative-square {
+        transform: rotate(1.5deg);
+    }
+    
+    .image-middle {
+        transform: rotate(-1deg);
+    }
+    
     .acronym-header {
-        font-size: 2.65rem; /* Increased from 2.4rem to maintain the 10% increase */
+        font-size: 2.65rem;
     }
     
     .separator {
@@ -168,7 +195,7 @@
     }
     
     .paragraphs p {
-        font-size: 1.0rem; /* Decreased from 1.1rem */
+        font-size: 1.0rem;
         text-align: left;
     }
     
@@ -206,7 +233,6 @@
         font-size: 1rem;
     }
     
-    /* Enhanced mobile flipbook experience */
     .flipbook-container {
         width: 260px;
     }
@@ -233,9 +259,25 @@
         font-size: 3.6rem;
     }
     
-    /* Further adjusted header size for small mobile - maintaining the 10% increase */
+    .image-placeholder {
+        max-width: 250px;
+    }
+    
+    .image-container {
+        max-width: 280px;
+        padding: 15px 0;
+    }
+    
+    .decorative-square {
+        transform: rotate(1deg);
+    }
+    
+    .image-middle {
+        transform: rotate(-0.5deg);
+    }
+    
     .acronym-header {
-        font-size: 2.4rem; /* Increased from 2.2rem to maintain the 10% increase */
+        font-size: 2.4rem;
     }
     
     .separator {
@@ -252,15 +294,7 @@
     }
     
     .paragraphs p {
-        font-size: 0.95rem; /* Decreased from original */
-    }
-    
-    .profile-image {
-        max-width: 250px;
-    }
-    
-    .image-placeholder {
-        max-width: 270px;
+        font-size: 0.95rem;
     }
     
     .acronym-container {
@@ -290,7 +324,6 @@
         font-size: 1rem;
     }
     
-    /* Adjusted flipbook size for small mobile */
     .flipbook-container {
         width: 240px;
     }
@@ -327,5 +360,13 @@
     
     .section-content {
         max-width: 1300px;
+    }
+    
+    .image-container {
+        max-width: 500px;
+    }
+    
+    .image-placeholder {
+        max-width: 460px;
     }
 }
