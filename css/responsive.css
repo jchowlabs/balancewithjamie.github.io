@@ -11,6 +11,11 @@
         max-width: 430px;
     }
     
+    /* Adjusted header size to be 10% larger than before */
+    .acronym-header {
+        font-size: 3.0rem; /* Adjusted proportionally */
+    }
+    
     /* Adjusted flipbook size for large screens */
     .flipbook-container {
         width: 300px;
@@ -45,18 +50,23 @@
         max-width: 380px;
     }
     
-    /* Adjusted header size for smaller screens */
+    /* Adjusted header size for smaller screens - keeping the 10% increase */
     .section-header {
         font-size: 2rem;
         margin-bottom: 30px;
     }
     
     .acronym-header {
-        font-size: 2.7rem;
+        font-size: 3.0rem; /* Adjusted from 2.7rem to maintain the 10% increase */
     }
     
     .tagline {
         font-size: 1.4rem;
+    }
+    
+    /* Adjusted paragraph text */
+    .paragraphs p {
+        font-size: 1.05rem; /* Decreased proportionally */
     }
     
     /* Freebie container responsive adjustment */
@@ -139,9 +149,9 @@
         max-width: 320px;
     }
     
-    /* Further reduced header size for mobile */
+    /* Adjusted header size for mobile - maintaining the 10% increase */
     .acronym-header {
-        font-size: 2.4rem;
+        font-size: 2.65rem; /* Increased from 2.4rem to maintain the 10% increase */
     }
     
     .separator {
@@ -158,7 +168,7 @@
     }
     
     .paragraphs p {
-        font-size: 1.1rem;
+        font-size: 1.0rem; /* Decreased from 1.1rem */
         text-align: left;
     }
     
@@ -223,9 +233,9 @@
         font-size: 2.8rem;
     }
     
-    /* Further reduced header size for small mobile */
+    /* Further adjusted header size for small mobile - maintaining the 10% increase */
     .acronym-header {
-        font-size: 2.2rem;
+        font-size: 2.4rem; /* Increased from 2.2rem to maintain the 10% increase */
     }
     
     .separator {
@@ -239,6 +249,10 @@
     .section-header {
         font-size: 1.7rem;
         margin-bottom: 20px;
+    }
+    
+    .paragraphs p {
+        font-size: 0.95rem; /* Decreased from original */
     }
     
     .profile-image {
