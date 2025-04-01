@@ -85,7 +85,7 @@ p {
 
 .name {
     font-family: 'Oswald', sans-serif;
-    font-size: 4.8rem;
+    font-size: 5.5rem;
     font-weight: 600;
     letter-spacing: 3px;
     margin-bottom: 30px;
@@ -118,7 +118,7 @@ p {
 .image-placeholder {
     padding: 8px;
     background-color: #ffffff;
-    border-radius: 50%;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -131,7 +131,7 @@ p {
     max-width: 469px;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 15px;
     border: 3px solid #f7f3e9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, max-width 0.3s ease; 
