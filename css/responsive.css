@@ -1,4 +1,42 @@
-/* Mobile styles */
+@media (max-width: 1200px) {
+    .name {
+        font-size: 3.8rem;
+    }
+    
+    .profile-image {
+        max-width: 400px;
+    }
+    
+    .image-placeholder {
+        max-width: 430px;
+    }
+}
+
+@media (max-width: 992px) {
+    .two-column {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .left-column, .profile-image-placeholder {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .name {
+        font-size: 4.35rem;
+        margin-bottom: 20px;
+    }
+    
+    .profile-image {
+        max-width: 350px;
+    }
+    
+    .image-placeholder {
+        max-width: 380px;
+    }
+}
+
 @media (max-width: 768px) {
     section {
         padding: 50px 15px;
@@ -15,7 +53,7 @@
     }
     
     .name {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: 20px;
     }
     
@@ -24,11 +62,11 @@
     }
     
     .profile-image {
-        max-width: 250px;
+        max-width: 300px;
     }
     
     .image-placeholder {
-        max-width: 250px;
+        max-width: 320px;
     }
     
     .acronym-header {
@@ -68,12 +106,16 @@
     .testimonials-container {
         grid-template-columns: 1fr;
     }
+    
+    .acronym-container {
+        padding: 20px;
+        max-width: 95%;
+    }
 }
 
-/* Tablet styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .name {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
     
     .tracks-container {
@@ -89,23 +131,15 @@
     .testimonials-container {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-/* Large screen adjustments */
-@media (min-width: 1440px) {
-    .two-column {
-        max-width: 1400px;
-    }
     
-    .section-content {
-        max-width: 1300px;
+    .acronym-container {
+        padding: 25px 30px;
     }
 }
 
-/* Adjustments for very small screens */
 @media (max-width: 480px) {
     .name {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     
     .acronym-header {
@@ -118,5 +152,27 @@
     
     .tagline {
         font-size: 1.3rem;
+    }
+    
+    .profile-image {
+        max-width: 250px;
+    }
+    
+    .image-placeholder {
+        max-width: 270px;
+    }
+    
+    .acronym-container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .two-column {
+        max-width: 1400px;
+    }
+    
+    .section-content {
+        max-width: 1300px;
     }
 }

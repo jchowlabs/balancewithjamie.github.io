@@ -5,19 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.15
     };
 
-    const handleIntersection = (entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
+    }, options);
     
-    const sections = document.querySelectorAll('section:not(:first-of-type)');
-    
-    sections.forEach(section => {
+    document.querySelectorAll('section:not(:first-of-type)').forEach(section => {
         observer.observe(section);
     });
 
@@ -28,4 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+    
+    const section2 = document.getElementById('section2');
+    if (section2) {
+        const acronymHeader = section2.querySelector('.acronym-header');
+        const tagline = section2.querySelector('.tagline');
+        
+        if (acronymHeader && tagline) {
+            const container = document.createElement('div');
+            container.className = 'acronym-container';
+            
+            const parent = acronymHeader.parentNode;
+            parent.insertBefore(container, acronymHeader);
+            
+            container.appendChild(acronymHeader);
+            container.appendChild(tagline);
+        }
+    }
 });
