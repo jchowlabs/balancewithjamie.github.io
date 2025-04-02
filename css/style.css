@@ -71,16 +71,16 @@ p {
     flex-wrap: wrap; 
 }
 
-.left-column, .right-column {
-    width: 49%; 
-    padding: 20px;
-}
-
 .left-column {
     width: 49%;
     padding: 20px;
     text-align: center;
     min-width: 300px;
+}
+
+.right-column {
+    width: 49%; 
+    padding: 20px;
 }
 
 .name {
@@ -118,9 +118,9 @@ p {
 .image-container {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 38px 0;
 }
 
 /* Bottom card - positioned lower right */
@@ -128,12 +128,12 @@ p {
     position: absolute;
     width: 90%;
     height: 90%;
-    background-color: #f0eefa; /* Light purple */
-    border-radius: 15px;
+    background-color: #f0eefa; 
+    border-radius: 18px;
     bottom: 0;
     right: 0;
     z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: rotate(3deg);
 }
 
@@ -142,28 +142,28 @@ p {
     position: absolute;
     width: 90%;
     height: 90%;
-    background-color: #f8daf1; /* Soft pink */
-    border-radius: 15px;
+    background-color: #f8daf1;
+    border-radius: 18px;
     top: 0;
     left: 0;
     z-index: 2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
     transform: rotate(-2deg);
 }
 
 /* Profile image container */
 .image-placeholder {
-    padding: 8px;
+    padding: 10px;
     background-color: #ffffff;
-    border-radius: 15px;
+    border-radius: 18px;
     display: flex;
     justify-content: center;
     width: 90%;
-    max-width: 440px;
+    max-width: 550px;
     margin: 0 auto;
     position: relative;
     z-index: 3;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .profile-image {
@@ -171,23 +171,12 @@ p {
     max-width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
 .profile-image:hover {
     transform: scale(1.02);
-}
-
-.image-placeholder svg {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.image-placeholder p {
-    font-size: 1rem;
-    margin: 0;
 }
 
 .section-content {
@@ -204,10 +193,6 @@ p {
     color: #333;
     margin-bottom: 10px;
     line-height: 1.1;
-}
-
-.separator {
-    display: none;
 }
 
 .tagline {
@@ -279,9 +264,9 @@ p {
     background-color: #75147c;
     color: white;
     border: none;
-    padding: 15px 35px;
-    font-size: 1.2rem;
-    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 26px;
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 1px;
@@ -299,21 +284,6 @@ p {
 .book-call-btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.section-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.section-header {
-    font-size: 2.25rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333;
 }
 
 .freebie-container {

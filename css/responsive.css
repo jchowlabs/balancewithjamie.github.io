@@ -8,12 +8,12 @@
     }
     
     .image-placeholder {
-        max-width: 420px;
+        max-width: 525px;
     }
     
     .image-container {
-        max-width: 460px;
-        padding: 25px 0;
+        max-width: 575px;
+        padding: 31px 0;
     }
     
     .decorative-square {
@@ -58,12 +58,12 @@
     }
     
     .image-placeholder {
-        max-width: 380px;
+        max-width: 475px;
     }
     
     .image-container {
-        max-width: 420px;
-        padding: 20px 0;
+        max-width: 525px;
+        padding: 25px 0;
     }
     
     .decorative-square {
@@ -72,11 +72,6 @@
     
     .image-middle {
         transform: rotate(-1deg);
-    }
-    
-    .section-header {
-        font-size: 2rem;
-        margin-bottom: 30px;
     }
     
     .acronym-header {
@@ -161,12 +156,12 @@
     }
     
     .image-placeholder {
-        max-width: 320px;
+        max-width: 400x;
     }
     
     .image-container {
-        max-width: 350px;
-        padding: 15px 0;
+        max-width: 435px;
+        padding: 18px 0;
     }
     
     .decorative-square {
@@ -181,17 +176,8 @@
         font-size: 2.65rem;
     }
     
-    .separator {
-        font-size: 2.5rem;
-    }
-    
     .tagline {
         font-size: 1.36rem;
-    }
-    
-    .section-header {
-        font-size: 1.85rem;
-        margin-bottom: 25px;
     }
     
     .paragraphs p {
@@ -200,11 +186,6 @@
     }
     
     .acronym-container {
-        padding: 20px;
-        max-width: 95%;
-    }
-    
-    .resources-header-container {
         padding: 20px;
         max-width: 95%;
     }
@@ -252,6 +233,12 @@
         width: 9px;
         height: 9px;
     }
+
+    .book-call-btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -260,12 +247,12 @@
     }
     
     .image-placeholder {
-        max-width: 250px;
+        max-width: 310px;
     }
     
     .image-container {
-        max-width: 280px;
-        padding: 15px 0;
+        max-width: 350px;
+        padding: 18px 0;
     }
     
     .decorative-square {
@@ -280,17 +267,8 @@
         font-size: 2.4rem;
     }
     
-    .separator {
-        font-size: 2rem;
-    }
-    
     .tagline {
         font-size: 1.26rem;
-    }
-    
-    .section-header {
-        font-size: 1.7rem;
-        margin-bottom: 20px;
     }
     
     .paragraphs p {
@@ -298,10 +276,6 @@
     }
     
     .acronym-container {
-        padding: 15px;
-    }
-    
-    .resources-header-container {
         padding: 15px;
     }
     
@@ -351,6 +325,11 @@
         height: 8px;
         margin: 0 3px;
     }
+
+    .book-call-btn {
+        padding: 9px 22px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -363,10 +342,10 @@
     }
     
     .image-container {
-        max-width: 500px;
+        max-width: 625px;
     }
     
     .image-placeholder {
-        max-width: 460px;
+        max-width: 575px;
     }
 }
