@@ -1,13 +1,147 @@
+@media (min-width: 1440px) {
+    .two-column {
+        max-width: 1400px;
+    }
+    
+    .section-content {
+        max-width: 1300px;
+    }
+    
+    .image-container {
+        max-width: 625px;
+    }
+    
+    .image-frame {
+        max-width: 575px;
+    }
+    
+    #section2 {
+        min-height: auto;
+        padding: 80px 0;
+    }
+    
+    #section2::before {
+        top: -40px;
+        width: 45%;
+        height: calc(100% + 40px);
+        background-size: 80%;
+        background-position: right center;
+    }
+    
+    #section2 .left-align-wrapper {
+        max-width: 1400px;
+        padding: 0 80px;
+    }
+    
+    #section2 .narrower-container {
+        width: 66%;
+        padding: 55px 60px;
+        min-height: unset;
+        max-width: 960px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.32rem;
+        margin-bottom: 28px;
+        line-height: 1.65;
+    }
+    
+    .email-form {
+        max-width: 432px;
+    }
+    
+    .ebook-text {
+        width: 90%;
+        font-size: 1.15rem;
+    }
+    
+    .flipbook-container {
+        width: 375px;
+    }
+    
+    .flipbook {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1439px) {
+    .section-content {
+        max-width: 1250px;
+    }
+    
+    #section2 .left-align-wrapper {
+        max-width: 1300px;
+        padding: 0 70px;
+    }
+    
+    #section2 .narrower-container {
+        width: 66%;
+        padding: 52px 58px;
+        min-height: unset;
+        max-width: 940px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.28rem;
+        margin-bottom: 26px;
+        line-height: 1.65;
+    }
+    
+    .flipbook-container {
+        width: 375px;
+    }
+    
+    .flipbook {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1280px) {
+    .section-content {
+        max-width: 1200px;
+    }
+    
+    #section2 .left-align-wrapper {
+        max-width: 1250px;
+        padding: 0 60px;
+    }
+    
+    #section2 .narrower-container {
+        width: 66%;
+        padding: 50px 56px;
+        min-height: unset;
+        max-width: 920px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+        line-height: 1.65;
+    }
+    
+    .flipbook-container {
+        width: 375px;
+    }
+    
+    .flipbook {
+        height: 500px;
+    }
+}
+
 @media (max-width: 1200px) {
     .name {
         font-size: 4.8rem;
+    }
+    
+    .name.cursive {
+        font-size: 5.8rem;
     }
     
     .profile-image {
         max-width: 100%;
     }
     
-    .image-placeholder {
+    .image-frame {
         max-width: 525px;
     }
     
@@ -24,20 +158,77 @@
         transform: rotate(-1.5deg);
     }
     
-    .acronym-header {
-        font-size: 3.0rem;
+    #section2 {
+        min-height: auto;
+        padding: 70px 0;
     }
     
-    .tagline {
-        font-size: 1.46rem;
+    #section2::before {
+        top: -40px;
+        width: 45%;
+        height: calc(100% + 40px);
+        background-size: 80%;
+        background-position: right center;
+    }
+    
+    #section2 .left-align-wrapper {
+        padding: 0 50px;
+    }
+    
+    #section2 .narrower-container {
+        width: 68%;
+        padding: 48px 54px;
+        min-height: unset;
+        max-width: 900px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.22rem;
+        margin-bottom: 24px;
+        line-height: 1.62;
     }
     
     .flipbook-container {
-        width: 300px;
+        width: 375px;
     }
     
     .flipbook {
-        height: 400px;
+        height: 500px;
+    }
+    
+    .email-form {
+        max-width: 396px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1100px) {
+    #section2 .left-align-wrapper {
+        padding: 0 45px;
+    }
+    
+    #section2 .narrower-container {
+        width: 70%;
+        padding: 45px 50px;
+        min-height: unset;
+        max-width: 850px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.18rem;
+        margin-bottom: 22px;
+        line-height: 1.6;
+    }
+    
+    .flipbook-container {
+        width: 375px;
+    }
+    
+    .flipbook {
+        height: 500px;
+    }
+    
+    .page::after {
+        content: none;
     }
 }
 
@@ -47,7 +238,7 @@
         gap: 30px;
     }
     
-    .left-column, .profile-image-placeholder {
+    .content-column, .profile-image-container {
         width: 100%;
         padding: 10px;
     }
@@ -57,7 +248,11 @@
         margin-bottom: 20px;
     }
     
-    .image-placeholder {
+    .name.cursive {
+        font-size: 6.5rem;
+    }
+    
+    .image-frame {
         max-width: 475px;
     }
     
@@ -74,16 +269,35 @@
         transform: rotate(-1deg);
     }
     
-    .acronym-header {
-        font-size: 3.0rem;
+    #section2 {
+        min-height: auto;
+        padding: 60px 0;
     }
     
-    .tagline {
-        font-size: 1.46rem;
+    #section2::before {
+        top: -40px;
+        width: 45%;
+        height: calc(100% + 40px);
+        background-size: 85%;
+        background-position: right center;
+        opacity: 0.35;
     }
     
-    .paragraphs p {
-        font-size: 1.05rem;
+    #section2 .left-align-wrapper {
+        padding: 0 40px;
+    }
+    
+    #section2 .narrower-container {
+        width: 72%;
+        padding: 42px 46px;
+        min-height: unset;
+        max-width: 800px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.15rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
     }
     
     .freebie-container {
@@ -104,10 +318,19 @@
     .ebook-description {
         text-align: center;
         padding-right: 0;
+        width: 100%;
     }
     
     .email-form {
         margin: 35px auto 0;
+        width: 90%;
+        max-width: 396px;
+    }
+    
+    .ebook-text {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .ebook-title {
@@ -117,17 +340,44 @@
     }
     
     .flipbook-container {
-        width: 285px;
+        width: 356px;
     }
     
     .flipbook {
-        height: 380px;
+        height: 475px;
+    }
+    
+    .page {
+        border-radius: 0;
+    }
+    
+    .page::after {
+        content: none;
     }
     
     .nav-arrow {
-        width: 38px;
-        height: 38px;
-        font-size: 1.4rem;
+        width: 26px;
+        height: 26px;
+        font-size: 1rem;
+    }
+    
+    .flipbook-status::before {
+        content: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 880px) {
+    #section2 .narrower-container {
+        width: 80%;
+        padding: 38px 42px;
+        min-height: unset;
+        max-width: 750px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.12rem;
+        margin-bottom: 18px;
+        line-height: 1.55;
     }
 }
 
@@ -141,7 +391,7 @@
         gap: 20px;
     }
     
-    .left-column, .profile-image-placeholder {
+    .content-column, .profile-image-container {
         width: 100%;
         padding: 10px;
     }
@@ -151,12 +401,16 @@
         margin-bottom: 20px;
     }
     
+    .name.cursive {
+        font-size: 4.8rem;
+    }
+    
     .title {
         font-size: 1rem;
     }
     
-    .image-placeholder {
-        max-width: 400x;
+    .image-frame {
+        max-width: 400px;
     }
     
     .image-container {
@@ -172,22 +426,35 @@
         transform: rotate(-1deg);
     }
     
-    .acronym-header {
-        font-size: 2.65rem;
+    #section2 {
+        padding: 50px 0;
     }
     
-    .tagline {
-        font-size: 1.36rem;
+    #section2::before {
+        top: -30px;
+        width: 100%;
+        height: calc(100% + 30px);
+        background-size: 60%;
+        background-position: right bottom;
+        opacity: 0.25;
     }
     
-    .paragraphs p {
-        font-size: 1.0rem;
-        text-align: left;
+    #section2 .left-align-wrapper {
+        padding: 0 25px;
     }
     
-    .acronym-container {
-        padding: 20px;
-        max-width: 95%;
+    #section2 .narrower-container {
+        width: 90%;
+        padding: 35px 38px;
+        margin-bottom: 0;
+        min-height: unset;
+        max-width: 680px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+        line-height: 1.55;
     }
     
     .freebie-container {
@@ -200,6 +467,7 @@
     }
     
     .ebook-text {
+        width: 90%;
         font-size: 1rem;
         margin-bottom: 22px;
     }
@@ -207,6 +475,8 @@
     .email-form {
         gap: 12px;
         margin-top: 30px;
+        width: 90%;
+        max-width: 360px;
     }
     
     .download-btn, .email-input {
@@ -215,18 +485,33 @@
     }
     
     .flipbook-container {
-        width: 260px;
+        width: 325px;
     }
     
     .flipbook {
-        height: 347px;
+        height: 434px;
+    }
+    
+    .page {
+        border-radius: 0;
+    }
+    
+    .page-content {
+        border-radius: 0;
+    }
+    
+    .page::after {
+        content: none;
     }
     
     .nav-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 1.3rem;
-        background-color: rgba(117, 20, 124, 0.9);
+        width: 24px;
+        height: 24px;
+        font-size: 0.9rem;
+    }
+    
+    .flipbook-status::before {
+        content: none;
     }
     
     .page-dots .dot {
@@ -238,15 +523,33 @@
         padding: 10px 25px;
         font-size: 0.95rem;
     }
+}
 
+@media (min-width: 481px) and (max-width: 600px) {
+    #section2 .narrower-container {
+        width: 95%;
+        padding: 32px 35px;
+        min-height: unset;
+        max-width: 560px;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1.05rem;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+    
+    .flipbook-container {
+        width: 325px;
+    }
+    
+    .flipbook {
+        height: 434px;
+    }
 }
 
 @media (max-width: 480px) {
-    .name {
-        font-size: 3.6rem;
-    }
-    
-    .image-placeholder {
+    .image-frame {
         max-width: 310px;
     }
     
@@ -263,20 +566,64 @@
         transform: rotate(-0.5deg);
     }
     
-    .acronym-header {
-        font-size: 2.4rem;
+    #section2 {
+        position: relative;
+        padding: 40px 0;
+        min-height: auto;
     }
     
-    .tagline {
-        font-size: 1.26rem;
+    #section2::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100% + 15px);
+        background-image: url('../images/stackedstones.jpg');
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: 0;
     }
     
-    .paragraphs p {
-        font-size: 0.95rem;
+    #section2 .left-align-wrapper {
+        padding: 0 15px;
+        justify-content: center;
     }
     
-    .acronym-container {
-        padding: 15px;
+    #section2 .section-content {
+        position: relative;
+        z-index: 1;
+        justify-content: center;
+    }
+    
+    #section2 .narrower-container {
+        width: 100%;
+        padding: 28px;
+        min-height: unset;
+        margin-bottom: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        max-width: none;
+    }
+    
+    #section2 .paragraphs p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    
+    .right-image-container {
+        display: none;
+    }
+    
+    .name {
+        font-size: 3.6rem;
+    }
+    
+    .name.cursive {
+        font-size: 4.2rem;
     }
     
     .ebook-title {
@@ -285,31 +632,41 @@
     }
     
     .ebook-text {
+        width: 90%;
         margin-bottom: 20px;
     }
     
     .email-form {
         gap: 10px;
         margin-top: 25px;
-    }
-    
-    .download-btn, .email-input {
-        padding: 14px 20px;
-        font-size: 1rem;
+        width: 90%;
+        max-width: 324px;
     }
     
     .flipbook-container {
-        width: 240px;
+        width: 300px;
     }
     
     .flipbook {
-        height: 320px;
+        height: 400px;
+    }
+    
+    .page {
+        border-radius: 0;
+    }
+    
+    .page-content {
+        border-radius: 0;
+    }
+    
+    .page::after {
+        content: none;
     }
     
     .nav-arrow {
-        width: 32px;
-        height: 32px;
-        font-size: 1.2rem;
+        width: 22px;
+        height: 22px;
+        font-size: 0.85rem;
     }
     
     .prev-arrow {
@@ -318,6 +675,10 @@
     
     .next-arrow {
         right: 5px;
+    }
+    
+    .flipbook-status::before {
+        content: none;
     }
     
     .dot {
@@ -329,23 +690,5 @@
     .book-call-btn {
         padding: 9px 22px;
         font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 1440px) {
-    .two-column {
-        max-width: 1400px;
-    }
-    
-    .section-content {
-        max-width: 1300px;
-    }
-    
-    .image-container {
-        max-width: 625px;
-    }
-    
-    .image-placeholder {
-        max-width: 575px;
     }
 }

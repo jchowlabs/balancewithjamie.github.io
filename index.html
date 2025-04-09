@@ -6,7 +6,7 @@
     <title>Balance with Jamie</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Oswald:wght@500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@900&family=Oswald:wght@500;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -18,43 +18,46 @@
 <body>
     <section id="section1" class="section cream">
         <div class="two-column">
-            <div class="left-column">
-                <h1 class="name">JAMIE CHOW</h1>
-                <div class="titles">
-                    <p class="title">Registered Nurse</p>
-                    <p class="title">Integrative Nutrition Health Coach</p>
-                    <p class="title">Lupus Warrior</p>
-                    <button class="book-call-btn">Let's Chat!</button>
-                </div>
-            </div>
-            <div class="profile-image-placeholder">
+            <!-- Renamed from profile-image-placeholder to profile-image-container -->
+            <div class="profile-image-container">
                 <div class="image-container">
                     <div class="decorative-square"></div>
                     <div class="image-middle"></div>
-                    <div class="image-placeholder">
+                    <!-- Renamed from image-placeholder to image-frame -->
+                    <div class="image-frame">
                         <img src="images/profile.jpeg" alt="Jamie Chow" class="profile-image">
                     </div>
+                </div>
+            </div>
+            
+            <!-- Renamed from left-column to content-column -->
+            <div class="content-column">
+                <h1 class="name cursive">Hi Warrior!</h1>
+                <div class="titles">
+                    <p class="title">👋 I'm Jamie - here to help guide you</p>
+                    <p class="title">towards balance, strength, and hope</p>
+                    <p class="title">while living with lupus.</p>
+                    <button class="book-call-btn">Let's Chat!</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="section2" class="section purple">
-        <div class="section-content">
-            <h2 class="acronym-header">C.H.O.W</h2>
-            <h3 class="tagline"><span class="underline">C</span>ultivating <span class="underline">H</span>ealth and <span class="underline">O</span>ptimal <span class="underline">W</span>ellness</h3>
-            
-            <div class="paragraphs">
-                <p>I believe true healing goes beyond medication. While medicine plays a role, lasting wellness comes from the work you put into your own health. Lupus is rooted in inflammation, and my approach focuses on reducing it through sustainable diet and lifestyle changes.</p>
-                
-                <p>I blend Eastern and Western medicine, combining holistic practices with evidence-based science -- an approach that has helped me navigate my own lupus journey.</p>
-                
-                <p>As a nurse and lupus warrior, I believe true health is built on four essential pillars: <b>food, sleep, stress management, and movement</b>. <i>Food</i> is medicine, providing the nutrients your body needs to heal. <i>Quality sleep</i> plays a crucial role in restoring and repairing the body. <i>Managing stress</i> reduces inflammation and supports overall well-being. And <i>movement</i> -- whether gentle or intense -- keeps the body strong and resilient.</p>
-            
-                <p>When these four pillars are in <b>BALANCE</b>, your body has the best chance to thrive. You already have the ability to heal within you, and my role is to guide, educate, and empower you along the way. I can't wait to see your transformation unfold -- and for you to truly see and feel it too.</p>
+    <section id="section2" class="section">
+        <div class="left-align-wrapper">
+            <div class="section-content">
+                <div class="paragraphs narrower-container">
+                    <p><b>True healing goes beyond medication.</b></p>
+                    
+                    <p>As a Registered Nurse, Integrative Nutrition Health Coach, and Lupus Warrior, I believe health is built on four essential pillars: <b>food, sleep, stress management, and movement.</b> <i>Food</i> is medicine, providing the nutrients your body needs to heal. <i>Quality sleep</i> plays a crucial role in restoring and repairing the body. <i>Managing stress</i> reduces inflammation and supports overall well-being. And <i>movement</i> -- whether gentle or intense -- keeps the body strong and resilient.</p>
+                    
+                    <p>When these four pillars are in <b>BALANCE</b>, your body has the best chance to thrive. You already have the ability to heal within you, and my role is to guide, educate, and empower you along the way. I can't wait to see your transformation unfold -- and for you to truly see and feel it too.</p>
+                </div>
+                <!-- Add right side image container -->
+                <div class="right-image-container">
+                    <div class="stacked-stones-image"></div>
+                </div>
             </div>
-            
-            <!--<button class="book-call-btn">Let's Chat!</button>-->
         </div>
     </section>
 
@@ -63,7 +66,7 @@
             <div class="freebie-container">
                 <!-- Left side: Description and email form -->
                 <div class="ebook-description">
-                    <h3 class="ebook-title">Grab Your Freebie!</h3>
+                    <h3 class="ebook-title">Free Wellness Tracker!</h3>
                     <p class="ebook-text">Stay on top of your wellness with these simple, easy-to-use trackers! Designed to help you monitor
                         food, sleep, stress management, and movement, they'll support you in building healthy habits with
                         clarity and consistency. Download yours today and take the first step toward better health!</p>

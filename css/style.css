@@ -38,10 +38,6 @@ section:first-of-type {
     background-color: #ffffff;
 }
 
-.purple, .section-purple {
-    background-color: #f0eefa;
-}
-
 h1, h2, h3, h4 {
     margin: 0;
     color: #333;
@@ -71,20 +67,14 @@ p {
     flex-wrap: wrap; 
 }
 
-.left-column {
+.content-column {
     width: 49%;
     padding: 20px;
     text-align: center;
     min-width: 300px;
 }
 
-.right-column {
-    width: 49%; 
-    padding: 20px;
-}
-
 .name {
-    font-family: 'Oswald', sans-serif;
     font-size: 5.5rem;
     font-weight: 600;
     letter-spacing: 3px;
@@ -93,8 +83,15 @@ p {
     white-space: nowrap;
     text-align: center;
     line-height: 1;
-    text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.name.cursive {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 .titles {
@@ -102,13 +99,13 @@ p {
 }
 
 .title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 5px 0;
     color: #666;
     font-weight: normal;
 }
 
-.profile-image-placeholder {
+.profile-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +120,6 @@ p {
     padding: 38px 0;
 }
 
-/* Bottom card - positioned lower right */
 .decorative-square {
     position: absolute;
     width: 90%;
@@ -137,7 +133,6 @@ p {
     transform: rotate(3deg);
 }
 
-/* Middle card - positioned upper left */
 .image-middle {
     position: absolute;
     width: 90%;
@@ -151,8 +146,7 @@ p {
     transform: rotate(-2deg);
 }
 
-/* Profile image container */
-.image-placeholder {
+.image-frame {
     padding: 10px;
     background-color: #ffffff;
     border-radius: 18px;
@@ -183,71 +177,97 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
-.acronym-header {
-    font-size: 3.3rem;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 3px;
-    color: #333;
-    margin-bottom: 10px;
-    line-height: 1.1;
+#section2 {
+    position: relative;
+    background-color: #e4dddc;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    min-height: auto;
+    display: flex;
+    padding: 80px 0;
+    overflow: hidden;
 }
 
-.tagline {
-    font-size: 1.56rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: 40px;
-    color: #555;
-    line-height: 1.3;
+#section2::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 50%;
+    height: calc(100% + 40px);
+    background-image: url('../images/stackedstones.jpg');
+    background-size: 80%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: 0;
+    background-blend-mode: soft-light;
+    mix-blend-mode: multiply;
 }
 
-.underline {
-    text-decoration: none;
-    border-bottom: 2px solid rgba(105, 65, 131, 0.8);
-    padding-bottom: 2px;
-    font-weight: 600;
-}
-
-.acronym-container {
-    background-color: #75147c;
-    padding: 25px 35px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#section2 .acronym-header {
-    color: white;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-#section2 .tagline {
-    color: white;
-    margin-bottom: 0;
-}
-
-#section2 .underline {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+#section2 .left-align-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
 }
 
 #section2 .section-content {
-    max-width: 1100px; 
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-#section2 .paragraphs {
-    max-width: 1100px; 
-    margin: 30px auto;
+#section2 .narrower-container {
+    width: 66%;
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 50px 55px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    max-width: 935px;
 }
 
 #section2 .paragraphs p {
+    color: #333;
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 28px;
+    line-height: 1.7;
+}
+
+#section2 .paragraphs p:last-child {
+    margin-bottom: 0;
+}
+
+.right-image-container,
+.stacked-stones-image {
+    display: none;
+}
+
+.stacked-stones-image:hover {
+    opacity: 1;
+}
+
+#section2 .paragraphs {
     max-width: 100%;
+    margin: 0;
 }
 
 .paragraphs {
@@ -309,6 +329,9 @@ p {
     flex: 1.5;
     text-align: center;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ebook-title {
@@ -317,12 +340,16 @@ p {
     color: #333;
     margin-bottom: 30px;
     text-align: center;
+    width: 100%;
 }
 
 .ebook-text {
     font-size: 1.1rem;
     margin-bottom: 25px;
     text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .email-form {
@@ -330,8 +357,8 @@ p {
     flex-direction: column;
     gap: 15px;
     margin: 40px auto 0;
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 405px;
 }
 
 .email-input {
@@ -362,6 +389,7 @@ p {
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 .download-btn:hover {
@@ -386,18 +414,16 @@ p {
 }
 
 .flipbook-container {
-    width: 330px;
+    width: 375px;
     margin: 0 auto;
     position: relative;
 }
 
 .flipbook {
     width: 100%;
-    height: 440px;
+    height: 500px;
     position: relative;
     perspective: 1500px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -411,12 +437,17 @@ p {
     backface-visibility: hidden;
     opacity: 0;
     z-index: 0;
-    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
 .page:first-child {
     opacity: 1;
     z-index: 1;
+}
+
+.page::after {
+    content: none;
 }
 
 .page.active {
@@ -437,7 +468,6 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
     display: block;
 }
 
@@ -445,20 +475,21 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(117, 20, 124, 0.8);
+    background-color: rgba(117, 20, 124, 0.75);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     z-index: 20;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-arrow:hover {
@@ -467,11 +498,11 @@ p {
 }
 
 .prev-arrow {
-    left: 10px;
+    left: 6px;
 }
 
 .next-arrow {
-    right: 10px;
+    right: 6px;
 }
 
 .hover-zone {
@@ -498,6 +529,11 @@ p {
     align-items: center;
     margin-top: 15px;
     gap: 10px;
+    position: relative;
+}
+
+.flipbook-status::before {
+    content: none;
 }
 
 .page-dots {
