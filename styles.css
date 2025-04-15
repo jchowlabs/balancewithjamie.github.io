@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero, .philosophy, .pillars, .healing, .freebie {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.two-column-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.column-content {
+    max-width: 500px;
+    width: 100%;
+}
+
+.hero {
+    padding: 0;
+}
+
+.hero .left-column {
+    background-color: rgba(245, 245, 245, 0.9);
+    background-image: url('./static/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.hero .right-column {
+    background-color: #ffffff;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 10px;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 50px rgba(0,0,0,0.35);
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 600;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6b1e78;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5a1966;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 30, 120, 0.3);
+}
+
+.philosophy {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    background-image: url('./static/images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.philosophy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.7);
+    z-index: 0;
+}
+
+.philosophy .container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.philosophy h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.philosophy p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pillars {
+    padding: 0;
+}
+
+.pillars .left-column {
+    background-color: #ffffff;
+}
+
+.pillars .right-column {
+    background-image: url('./static/images/background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+}
+
+.pillars .right-column::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./static/images/stackedstones.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 0;
+    mix-blend-mode: normal;
+}
+
+.pillars-text p {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1.3rem;
+}
+
+.pillars-text ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.pillars-text li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.pillars-text li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6b1e78;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.pillars-text strong {
+    font-weight: 700;
+    color: #222;
+}
+
+.healing {
+    padding: 80px 0;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    background-image: url('./static/images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.healing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.7);
+    z-index: 0;
+}
+
+.healing .container {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.healing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.healing p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.freebie {
+    padding: 0;
+}
+
+.freebie .left-column {
+    background-color: transparent;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background-image: url('./static/images/freebie.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.freebie .right-column {
+    background-color: #ffffff;
+}
+
+.freebie-form {
+    text-align: center;
+    width: 100%;
+}
+
+.freebie-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.freebie-form p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .column {
+        padding: 40px 20px;
+    }
+    
+    .hero .left-column {
+        order: 2;
+    }
+    
+    .hero .right-column {
+        order: 1;
+    }
+    
+    .pillars .left-column {
+        order: 1;
+    }
+    
+    .pillars .right-column {
+        display: none;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .philosophy, .healing {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    .hero, .philosophy, .pillars, .healing, .freebie {
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        padding: 30px 15px;
+    }
+    
+    .hero-image img {
+        max-width: 280px;
+    }
+}
