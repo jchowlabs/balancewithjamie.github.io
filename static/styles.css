@@ -398,14 +398,14 @@ h1, h2 {
     .hero {
         background-color: #ffffff;
         min-height: 100vh !important;
-        margin-bottom: -5px;
+        margin-bottom: -10px;
     }
     
     .hero .left-column {
         order: 2;
         min-height: 50vh;
         padding-bottom: 0;
-        margin-bottom: 0;
+        margin-bottom: -2px;
         border-bottom: 0;
         position: relative;
         z-index: 0;
@@ -437,7 +437,7 @@ h1, h2 {
     .philosophy {
         min-height: 100vh !important;
         padding: 60px 0;
-        margin-top: 0;
+        margin-top: -2px;
         border-top: 0;
         position: relative;
         z-index: 1;
@@ -477,8 +477,9 @@ h1, h2 {
     }
     
     .hero, .philosophy, .pillars, .healing, .freebie {
-        transform: translateY(20px);
+        transform: translateY(0px);
         overflow: hidden;
+        position: relative;
     }
     
     section {
