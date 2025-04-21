@@ -155,7 +155,7 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: rgba(245, 245, 245, 0.6);
     z-index: 0;
 }
 
@@ -260,7 +260,7 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: rgba(245, 245, 245, 0.6);
     z-index: 0;
 }
 
@@ -398,11 +398,13 @@ h1, h2 {
     .hero {
         background-color: #ffffff;
         min-height: 100vh !important;
+        margin-bottom: -1px;
     }
     
     .hero .left-column {
         order: 2;
         min-height: 50vh;
+        padding-bottom: 0;
     }
     
     .hero .right-column {
@@ -428,6 +430,8 @@ h1, h2 {
     
     .philosophy {
         min-height: 100vh !important;
+        padding: 60px 0;
+        margin-top: 0; 
     }
     
     .healing {
