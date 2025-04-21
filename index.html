@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balance with Jamie</title>
     <link rel="stylesheet" href="./static/styles.css">
-    <!-- Google tag (gtag.js) --> 
-     <script async src=https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K></script> 
-     <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-002J8VYT3K'); </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src=https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K></script> 
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-002J8VYT3K'); </script>
 </head>
 <body>
     <section class="hero">
@@ -21,9 +25,13 @@
                 <div class="column-content hero-text">
                     <h1>Hi Warrior!</h1>
                     <p>I'm Jamie – here to help guide you toward balance, strength, and hope while living with lupus.</p>
-                    <a href="#" class="btn">Let's Chat!</a>
+                    <a href="https://calendly.com/balancewithjamie/free-consultation" class="btn">Let's Chat!</a>
                 </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
         </div>
     </section>
 
@@ -40,10 +48,10 @@
                 <div class="column-content pillars-text">
                     <p>As a Registered Nurse, Integrative Nutrition Health Coach, and Lupus Warrior, I believe health is built on four essential pillars: <strong>food, sleep, stress management, and movement</strong>.</p>
                     <ul>
-                        <li><strong>Food</strong> is medicine, providing the nutrients your body needs to heal.</li>
-                        <li><strong>Quality sleep</strong> plays a crucial role in restoring and repairing the body.</li>
-                        <li><strong>Managing stress</strong> reduces inflammation and supports overall well-being.</li>
-                        <li><strong>Movement</strong>—whether gentle or intense—keeps the body strong and resilient.</li>
+                        <li><i>Food</i> is medicine, providing the nutrients your body needs to heal.</li>
+                        <li><i>Quality sleep</i> plays a crucial role in restoring and repairing the body.</li>
+                        <li><i>Managing stress</i> reduces inflammation and supports overall well-being.</li>
+                        <li><i>Movement</i>—whether gentle or intense—keeps the body strong and resilient.</li>
                     </ul>
                     <p>When these four pillars are in <strong>BALANCE</strong>, your body has the best chance to thrive.</p>
                 </div>
@@ -107,6 +115,11 @@
             if (firstSection) {
                 firstSection.classList.add('section-visible');
             }
+            
+            document.querySelector('.scroll-indicator').addEventListener('click', function() {
+                const philosophySection = document.querySelector('.philosophy');
+                philosophySection.scrollIntoView({ behavior: 'smooth' });
+            });
         });
     </script>
 </body>
