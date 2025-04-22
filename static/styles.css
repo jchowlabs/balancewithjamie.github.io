@@ -372,6 +372,21 @@ h1, h2 {
     transform: skew(0deg, -30deg);
 }
 
+.success-response {
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.error-response {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+.response {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) translateX(-50%);
