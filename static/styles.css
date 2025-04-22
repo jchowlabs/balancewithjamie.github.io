@@ -387,6 +387,40 @@ h1, h2 {
     font-size: 0.9em;
 }
 
+input[type="email"],
+input[type="text"],
+textarea {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style placeholder text */
+::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+    opacity: 1; /* Firefox requires this */
+}
+
+/* Vendor prefixes for older browsers */
+::-webkit-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+::-moz-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+:-ms-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) translateX(-50%);

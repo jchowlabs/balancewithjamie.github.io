@@ -154,28 +154,25 @@
                 // Prepare template parameters
                 const templateParams = {
                     to_email: emailValue,
-                    // You can add more parameters here if needed for your template
                 };
                 
                 // Send email using EmailJS
                 emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
                     .then(function() {
                         // Success
-                        statusDiv.textContent = "Success! Your wellness tracker has been sent to your email.";
+                        statusDiv.textContent = "Your wellness tracker is on its way!";
                         statusDiv.className = "response success-response";
                         btn.textContent = "Sent!";
                         document.getElementById('wellness-tracker-form').reset();
                         
-                        // Reset button after 3 seconds
                         setTimeout(function() {
                             btn.disabled = false;
                             btn.textContent = originalBtnText;
                         }, 3000);
                     })
                     .catch(function(error) {
-                        // Error
                         console.error("EmailJS error:", error);
-                        statusDiv.textContent = "Something went wrong. Please try again later.";
+                        statusDiv.textContent = "Please try again later.";
                         statusDiv.className = "response error-response";
                         
                         btn.disabled = false;
