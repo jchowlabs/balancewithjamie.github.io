@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,28 +21,16 @@ body {
     font-size: 18px;
 }
 
+/* Typography */
+h1, h2 {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Layout Components */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-.hero, .philosophy, .pillars, .healing, .freebie {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-h1, h2 {
-    font-family: 'Tenor Sans', sans-serif;
-}
-
-.section-visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .two-column-layout {
@@ -63,6 +52,53 @@ h1, h2 {
     width: 100%;
 }
 
+/* Section General Styles */
+.hero, .philosophy, .pillars, .healing, .freebie {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6b1e78;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5a1966;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 30, 120, 0.3);
+}
+
+/* Dividers */
+.divider {
+    width: 200px;
+    height: 2px;
+    background-color: #6b1e78; 
+    margin: 20px auto 30px;
+    opacity: 0.7;
+}
+
+/* Hero Section */
 .hero {
     padding: 0;
     position: relative;
@@ -106,39 +142,23 @@ h1, h2 {
 
 .hero-text h1 {
     font-size: 4rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #222;
     font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
 }
 
 .hero-text p {
-    font-size: 1.3rem;
+    font-size: 1.48rem;
     margin-bottom: 30px;
     color: #444;
-    line-height: 1.8;
+    line-height: 1.4;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #6b1e78;
-    color: #fff;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #5a1966;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(107, 30, 120, 0.3);
-}
-
+/* Philosophy Section */
 .philosophy {
     padding: 80px 0;
     text-align: center;
@@ -155,7 +175,7 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(245, 245, 245, 0.5);
     z-index: 0;
 }
 
@@ -166,19 +186,25 @@ h1, h2 {
 }
 
 .philosophy h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 35px;
     color: #222;
+    letter-spacing: -1px; 
+    line-height: 1; 
+    font-weight: 501; 
 }
 
 .philosophy p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    max-width: 800px;
+    max-width: 950px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; 
 }
 
+/* Pillars Section */
 .pillars {
     padding: 0;
 }
@@ -214,28 +240,37 @@ h1, h2 {
 .pillars-text p {
     margin-bottom: 15px;
     color: #444;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.6; 
 }
 
 .pillars-text ul {
     list-style-type: none;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
+    padding-left: 0; 
 }
 
 .pillars-text li {
-    margin-bottom: 15px;
-    padding-left: 30px;
+    margin-bottom: 15px; 
+    padding-left: 30px; 
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.6; 
 }
 
 .pillars-text li::before {
-    content: "⟡";
+    content: "";
     position: absolute;
-    left: 0;
-    color: #6b1e78;
-    font-weight: bold;
-    font-size: 1.5rem;
+    left: 10px; 
+    top: 10px; 
+    width: 8px;
+    height: 8px; 
+    background-color: #222;
+    border-radius: 50%;
 }
 
 .pillars-text strong {
@@ -243,6 +278,7 @@ h1, h2 {
     color: #222;
 }
 
+/* Healing Section */
 .healing {
     padding: 80px 0;
     text-align: center;
@@ -260,7 +296,7 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(245, 245, 245, 0.6);
+    background-color: rgba(245, 245, 245, 0.4);
     z-index: 0;
 }
 
@@ -271,18 +307,24 @@ h1, h2 {
 }
 
 .healing h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 35px; 
     color: #222;
+    letter-spacing: -1px; 
+    line-height: 1; 
+    font-weight: 501; 
 }
 
 .healing p {
-    font-size: 1.2rem;
-    max-width: 700px;
+    font-size: 1.5rem;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300; 
 }
 
+/* Freebie Section */
 .freebie {
     padding: 0;
 }
@@ -308,16 +350,26 @@ h1, h2 {
 
 .freebie-form h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #222;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    font-weight: 501;
 }
 
 .freebie-form p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
     color: #444;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
+/* Form Elements */
 .form-group {
     margin-bottom: 20px;
 }
@@ -331,6 +383,56 @@ h1, h2 {
     outline: none;
 }
 
+input[type="email"],
+input[type="text"],
+textarea {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #333;
+}
+
+::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+    opacity: 1;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+
+::-moz-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #999;
+}
+
+.success-response {
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.error-response {
+    color: #dc3545;
+    margin-top: 10px;
+}
+
+.response {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Navigation Elements */
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -372,55 +474,7 @@ h1, h2 {
     transform: skew(0deg, -30deg);
 }
 
-.success-response {
-    color: #28a745;
-    margin-top: 10px;
-}
-
-.error-response {
-    color: #dc3545;
-    margin-top: 10px;
-}
-
-.response {
-    margin-top: 10px;
-    font-size: 0.9em;
-}
-
-input[type="email"],
-input[type="text"],
-textarea {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #333;
-}
-
-/* Style placeholder text */
-::placeholder {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #999;
-    opacity: 1; /* Firefox requires this */
-}
-
-/* Vendor prefixes for older browsers */
-::-webkit-input-placeholder {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #999;
-}
-::-moz-placeholder {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #999;
-}
-:-ms-input-placeholder {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #999;
-}
-
+/* Animations */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0) translateX(-50%);
@@ -433,6 +487,7 @@ textarea {
     }
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .two-column-layout {
         flex-direction: column;
