@@ -510,14 +510,16 @@ textarea {
     
     .hero {
         background-color: #ffffff;
-        min-height: 90vh !important;
+        min-height: 100vh !important;
         margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
     }
     
     .hero .left-column {
         order: 2;
-        min-height: 50vh;
-        height: 50vh;
+        min-height: 40vh;
+        height: 40vh;
         padding: 0;
         margin: 0;
         border: 0;
@@ -532,8 +534,13 @@ textarea {
         order: 1;
         background-color: #ffffff;
         width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+        line-height: 1.1;
     }
     
     .pillars {
@@ -593,10 +600,6 @@ textarea {
         padding-bottom: 30px;
     }
     
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-    
     .philosophy, .healing {
         padding: 60px 0;
     }
@@ -619,7 +622,7 @@ textarea {
     }
     
     .scroll-indicator {
-        bottom: 10px;
+        bottom: 5px;
     }
     
     body {
@@ -637,7 +640,7 @@ textarea {
     }
     
     .hero, .pillars, .freebie {
-        min-height: 90vh !important;
+        min-height: 100vh !important;
     }
     
     .philosophy, .healing {
@@ -646,8 +649,18 @@ textarea {
     }
     
     .hero .left-column {
-        min-height: 45vh;
-        height: 45vh;
+        min-height: 38vh;
+        height: 38vh;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+    
+    .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
     }
     
     .freebie .left-column {
@@ -667,7 +680,12 @@ textarea {
 
 @media (max-width: 375px) {
     .hero-text h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
+        line-height: 1.1;
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
     }
     
     .philosophy h2, 
@@ -679,9 +697,5 @@ textarea {
     .pillars-text p, 
     .pillars-text li {
         font-size: 1rem;
-    }
-    
-    .hero-text p {
-        font-size: 1.3rem;
     }
 }
