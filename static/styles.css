@@ -268,14 +268,17 @@ h1, h2 {
 }
 
 .pillars-text li::before {
-    content: "";
+    content: "⟡";  
     position: absolute;
-    left: 10px; 
-    top: 10px; 
-    width: 8px;
-    height: 8px; 
-    background-color: #222;
-    border-radius: 50%;
+    left: 0;      
+    top: 0;     
+    width: auto; 
+    height: auto;  
+    background-color: transparent; 
+    border-radius: 0; 
+    font-size: 1.2rem; 
+    color: #222;     
+    line-height: 1.6; 
 }
 
 .pillars-text strong {
