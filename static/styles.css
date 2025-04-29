@@ -191,7 +191,8 @@ h1, h2 {
     color: #222;
     letter-spacing: -1px; 
     line-height: 1; 
-    font-weight: 450; 
+    font-weight: 450;
+    text-shadow: 0 0 0.005px #222; 
 }
 
 .philosophy p {
@@ -201,7 +202,8 @@ h1, h2 {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Lato', sans-serif;
-    font-weight: 300; 
+    font-weight: 300;
+     
 }
 
 /* Pillars Section */
@@ -312,7 +314,8 @@ h1, h2 {
     color: #222;
     letter-spacing: -1px; 
     line-height: 1; 
-    font-weight: 450; 
+    font-weight: 450;
+    text-shadow: 0 0 0.005px #222;  
 }
 
 .healing p {
