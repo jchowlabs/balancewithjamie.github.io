@@ -548,7 +548,7 @@ textarea {
     }
     
     .philosophy {
-        min-height: 90vh !important;
+        min-height: 100vh !important;
         padding: 60px 0;
         margin: 0;
         border: 0;
@@ -557,7 +557,7 @@ textarea {
     }
     
     .healing {
-        min-height: 90vh !important;
+        min-height: 100vh !important;
     }
     
     .freebie {
@@ -589,11 +589,16 @@ textarea {
     }
     
     .philosophy, .healing {
-        min-height: 90vh !important;
         padding: 60px 0;
     }
     
-    .hero, .philosophy, .pillars, .healing, .freebie {
+    .hero, .pillars, .freebie {
+        transform: translateY(0);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .philosophy, .healing {
         transform: translateY(0);
         overflow: hidden;
         position: relative;
@@ -622,11 +627,12 @@ textarea {
         max-width: 280px;
     }
     
-    .hero, .philosophy, .pillars, .healing, .freebie {
+    .hero, .pillars, .freebie {
         min-height: 90vh !important;
     }
     
     .philosophy, .healing {
+        min-height: 100vh !important;
         padding: 40px 0;
     }
     
