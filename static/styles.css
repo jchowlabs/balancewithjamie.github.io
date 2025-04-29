@@ -501,13 +501,14 @@ textarea {
     
     .hero {
         background-color: #ffffff;
-        min-height: 100vh !important;
+        min-height: 90vh !important;
         margin-bottom: 0;
     }
     
     .hero .left-column {
         order: 2;
-        min-height: 60vh;
+        min-height: 50vh;
+        height: 50vh;
         padding: 0;
         margin: 0;
         border: 0;
@@ -522,11 +523,18 @@ textarea {
         order: 1;
         background-color: #ffffff;
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     
     .pillars {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
         background-color: #ffffff;
+    }
+    
+    .pillars-text p, 
+    .pillars-text li {
+        font-size: 1.35rem;
     }
     
     .pillars .left-column {
@@ -540,7 +548,7 @@ textarea {
     }
     
     .philosophy {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
         padding: 60px 0;
         margin: 0;
         border: 0;
@@ -549,17 +557,18 @@ textarea {
     }
     
     .healing {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
     }
     
     .freebie {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
         background-color: #ffffff;
     }
     
     .freebie .left-column {
         order: 2;
-        min-height: 60vh;
+        min-height: 50vh;
+        height: 50vh;
         background-image: url('./images/freebie.png');
         background-size: cover;
         background-position: center;
@@ -571,6 +580,8 @@ textarea {
         order: 1;
         background-color: #ffffff;
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
     
     .hero-text h1 {
@@ -578,7 +589,7 @@ textarea {
     }
     
     .philosophy, .healing {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
         padding: 60px 0;
     }
     
@@ -604,7 +615,7 @@ textarea {
 
 @media (max-width: 480px) {
     .column {
-        padding: 30px 15px;
+        padding: 25px 15px;
     }
     
     .hero-image img {
@@ -612,7 +623,7 @@ textarea {
     }
     
     .hero, .philosophy, .pillars, .healing, .freebie {
-        min-height: 100vh !important;
+        min-height: 90vh !important;
     }
     
     .philosophy, .healing {
@@ -620,13 +631,22 @@ textarea {
     }
     
     .hero .left-column {
-        min-height: 60vh;
-        height: 60vh;
+        min-height: 45vh;
+        height: 45vh;
     }
     
     .freebie .left-column {
-        min-height: 60vh;
-        height: 60vh;
+        min-height: 45vh;
+        height: 45vh;
+    }
+    
+    .freebie-form h2 {
+        font-size: 2.2rem;
+    }
+    
+    .freebie-form p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 }
 
@@ -643,6 +663,10 @@ textarea {
     
     .pillars-text p, 
     .pillars-text li {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.3rem;
     }
 }
