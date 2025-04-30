@@ -510,7 +510,7 @@ textarea {
     
     .hero {
         background-color: #ffffff;
-        min-height: auto !important;
+        min-height: 90vh !important;
         margin-bottom: 0;
     }
     
@@ -533,7 +533,7 @@ textarea {
         background-color: #ffffff;
         width: 100%;
         padding-top: 30px;
-        padding-bottom: 10px;
+        padding-bottom: 30px;
     }
     
     .pillars {
@@ -594,13 +594,7 @@ textarea {
     }
     
     .hero-text h1 {
-        font-size: 2.6rem;
-        line-height: 1.3;
-    }
-    
-    .hero-text p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
+        font-size: 3rem;
     }
     
     .philosophy, .healing {
@@ -631,11 +625,6 @@ textarea {
     body {
         overflow-x: hidden;
     }
-
-    .two-column-layout {
-        margin: 0;
-        padding: 0;
-    }
 }
 
 @media (max-width: 480px) {
@@ -644,23 +633,7 @@ textarea {
     }
     
     .hero-image img {
-        width: 100%;
-        max-width: none;
-        height: auto;
-        border-radius: 0;
-        box-shadow: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-height: 100%;
-        object-fit: cover;
-    }
-    
-    .hero-image {
-        position: relative;
-        height: 100%;
-        overflow: hidden;
+        max-width: 280px;
     }
     
     .hero, .pillars, .freebie {
@@ -675,9 +648,6 @@ textarea {
     .hero .left-column {
         min-height: 45vh;
         height: 45vh;
-        position: relative;
-        overflow: hidden;
-        padding: 0;
     }
     
     .freebie .left-column {
@@ -693,19 +663,11 @@ textarea {
         font-size: 1.2rem;
         margin-bottom: 20px;
     }
-
-    .hero .column-content {
-        max-width: 100%;
-    }
-    
-    .scroll-indicator {
-        bottom: 5px;
-    }
 }
 
 @media (max-width: 375px) {
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
     
     .philosophy h2, 
@@ -720,10 +682,6 @@ textarea {
     }
     
     .hero-text p {
-        font-size: 1.1rem;
-    }
-
-    .hero .right-column {
-        padding-bottom: 5px;
+        font-size: 1.3rem;
     }
 }
