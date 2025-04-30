@@ -510,14 +510,14 @@ textarea {
     
     .hero {
         background-color: #ffffff;
-        min-height: 90vh !important;
+        min-height: auto !important;
         margin-bottom: 0;
     }
     
     .hero .left-column {
         order: 2;
-        min-height: 50vh;
-        height: 50vh;
+        min-height: 40vh;
+        height: 40vh;
         padding: 0;
         margin: 0;
         border: 0;
@@ -594,7 +594,13 @@ textarea {
     }
     
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-text p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
     
     .philosophy, .healing {
@@ -633,7 +639,10 @@ textarea {
     }
     
     .hero-image img {
-        max-width: 280px;
+        max-width: 100%;
+        height: auto;
+        max-height: 38vh;
+        object-fit: cover;
     }
     
     .hero, .pillars, .freebie {
@@ -646,8 +655,8 @@ textarea {
     }
     
     .hero .left-column {
-        min-height: 45vh;
-        height: 45vh;
+        min-height: 40vh;
+        height: 40vh;
     }
     
     .freebie .left-column {
@@ -667,7 +676,7 @@ textarea {
 
 @media (max-width: 375px) {
     .hero-text h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
     
     .philosophy h2, 
@@ -682,6 +691,6 @@ textarea {
     }
     
     .hero-text p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 }
