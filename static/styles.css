@@ -355,6 +355,7 @@ h1, h2 {
 .freebie-form {
     text-align: center;
     width: 100%;
+    max-width: 500px;
 }
 
 .freebie-form h2 {
@@ -367,7 +368,7 @@ h1, h2 {
 }
 
 .freebie-form p {
-    font-size: 1.38rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
     color: #444;
     max-width: 100%;
