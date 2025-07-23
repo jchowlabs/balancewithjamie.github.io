@@ -10,10 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Tenor+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script async src=https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K></script> 
-    <!-- Google Analytics -->
-    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-002J8VYT3K'); </script>
-    <!-- EmailJS SDK -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-002J8VYT3K');
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -22,12 +25,13 @@
             <div class="column left-column">
                 <div class="column-content hero-image">
                     <img src="./static/images/profile.jpeg" alt="Jamie's portrait">
+                    <p class="credentials">Nurse. Health Coach. Lupus Warrior.</p>
                 </div>
             </div>
             <div class="column right-column">
                 <div class="column-content hero-text">
-                    <h1 style="line-height: 1.25;">Hi Warrior,<br>I'm Jamie.</h1>
-                    <p>Here to help guide you towards balance, strength, and hope while living with lupus.</p>
+                    <h1 style="line-height: 1.25;">Welcome,<br>I'm Jamie.</h1>
+                    <p class="hero-tagline">Living with lupus can feel like a lot -<br><span class="bold-text">I'm here to support you.</span></p>
                     <a href="https://calendly.com/balancewithjamie/free-consultation" class="btn">Let's Chat!</a>
                 </div>
             </div>
@@ -40,48 +44,83 @@
 
     <section class="philosophy">
         <div class="container">
-            <h2>True healing goes beyond medication.</h2>
+            <h2>True healing starts from <em>within.</em></h2>
             <div class="divider"></div>
-            <p>It's a journey that starts with how we care for our bodies every day. Healing isn't just about treating symptoms - it's about uncovering the root cause and creating a lifestyle that supports your body, mind, and spirit.</p>
+            <p>It's more than just medication - it's about nurturing your body with intention each day. Healing means looking beyond symptoms to understand the root cause, and building a lifestyle that nourishes your body, mind, and spirit.</p>
         </div>
     </section>
 
     <section class="pillars">
-        <div class="two-column-layout">
-            <div class="column left-column">
-                <div class="column-content pillars-text">
-                    <p>As a Registered Nurse, Health Coach, and Lupus Warrior, I believe health is built on four essential pillars:</p>
-                    <ul>
-                        <li><strong>Food</strong> is medicine, providing the nutrients your body needs to heal.</li>
-                        <li><strong>Quality sleep</strong> plays a crucial role in restoring and repairing the body.</li>
-                        <li><strong>Managing stress</strong> reduces inflammation and supports overall well-being.</li>
-                        <li><strong>Movement</strong>—whether gentle or intense—keeps the body strong and resilient.</li>
-                    </ul>
-                    <p>When these four pillars are in <strong>BALANCE</strong>, your body has the best chance to thrive.</p>
+        <div class="container">
+            <h2>Health is built on <em>Four Pillars</em>.</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Food</h3>
+                            <div class="pillar-icon">
+                                <img src="./static/images/food.png" alt="Food icon">
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p>Food is <em>medicine</em>, providing your body with the right nutrients it needs to heal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Sleep</h3>
+                            <div class="pillar-icon">
+                                <img src="./static/images/sleep.png" alt="Sleep icon">
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p><em>Quality sleep</em> is essential for restoring and repairing the body.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Stress Management</h3>
+                            <div class="pillar-icon">
+                                <img src="./static/images/stress.png" alt="Stress Management icon">
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p><em>Managing stress</em> helps reduce inflammation and supports overall well-being.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h3>Movement</h3>
+                            <div class="pillar-icon">
+                                <img src="./static/images/exercise.png" alt="Movement icon">
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p><em>Movement</em> - whether gentle or active - helps keep your body resilient and strong.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="column right-column">
-            </div>
-        </div>
-    </section>
-
-    <section class="healing">
-        <div class="container">
-            <h2>You already have the ability to heal within you.</h2>
-            <p>And I'm here to offer support, share knowledge, and empower you to take meaningful steps forward on your lupus journey.</p>
+            <p class="pillars-conclusion">When these four pillars are in <span class="bold-text">BALANCE</span>, your body has the best chance to thrive.</p>
         </div>
     </section>
 
     <section class="freebie">
         <div class="two-column-layout">
-            <div class="column left-column">
-            </div>
+            <div class="column left-column"></div>
             <div class="column right-column">
                 <div class="column-content freebie-form">
                     <h2>Free Wellness Guide!</h2>
                     <p>Learn how the <i>Four Pillars of Health</i> can support your body, reduce inflammation, and help you feel more in control - one small step at a time.</p>
-                    
-                    <!-- EmailJS Form -->
                     <form id="wellness-tracker-form">
                         <div class="form-group">
                             <input type="email" name="user_email" id="user_email" class="form-control" placeholder="Email Address" required>
@@ -103,12 +142,27 @@
             );
         }
         
+        let pillarsAnimated = false;
+        
         function handleScroll() {
             const sections = document.querySelectorAll('.hero, .philosophy, .pillars, .healing, .freebie');
             
             sections.forEach(section => {
                 if (isInViewport(section)) {
                     section.classList.add('section-visible');
+                    
+                    if (section.classList.contains('pillars') && !pillarsAnimated) {
+                        setTimeout(() => {
+                            const firstCard = section.querySelector('.pillar-card');
+                            if (firstCard) {
+                                firstCard.classList.add('auto-flip');
+                                setTimeout(() => {
+                                    firstCard.classList.remove('auto-flip');
+                                }, 3000);
+                            }
+                        }, 500);
+                        pillarsAnimated = true;
+                    }
                 }
             });
         }
@@ -130,16 +184,13 @@
         });
     </script>
     
-    <!-- EmailJS Integration Script -->
-    <script type="text/javascript">
+    <script>
         (function() {
-            // Initialize EmailJS with your User ID
-            emailjs.init("CklLL1WUpc6TzPzeO"); // Replace this with your actual EmailJS public key
+            emailjs.init("CklLL1WUpc6TzPzeO");
             
             document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 
-                // Show loading state
                 const btn = document.getElementById('submit-btn');
                 const statusDiv = document.getElementById('form-status');
                 const originalBtnText = btn.textContent;
@@ -150,18 +201,14 @@
                 statusDiv.textContent = "Sending your wellness guide...";
                 statusDiv.className = "response";
                 
-                // Get the email value
                 const emailValue = document.getElementById('user_email').value;
                 
-                // Prepare template parameters
                 const templateParams = {
                     to_email: emailValue,
                 };
                 
-                // Send email using EmailJS
                 emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
                     .then(function() {
-                        // Success
                         statusDiv.textContent = "Your wellness guide is on its way!";
                         statusDiv.className = "response success-response";
                         btn.textContent = "Sent!";
