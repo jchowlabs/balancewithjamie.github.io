@@ -462,7 +462,7 @@ h1, h2 {
 }
 
 .freebie .right-column {
-    background-color: rgb(249, 247, 245);
+    background-color: white;
 }
 
 .freebie-form {
@@ -691,7 +691,7 @@ textarea {
 
     .freebie .right-column {
         order: 1;
-        background-color: rgb(249, 247, 245);
+        background-color: white;
         width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
