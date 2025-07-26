@@ -1,5 +1,5 @@
 /* ========================================
-   RESET & BASE STYLES
+   BASE STYLES
    ======================================== */
 
 * {
@@ -229,7 +229,7 @@ h1, h2 {
 .philosophy {
     padding: 80px 0;
     text-align: center;
-    background-color: rgb(236, 230, 225);
+    background-color: rgb(240, 235, 230);
 }
 
 .philosophy .container {
@@ -462,7 +462,7 @@ h1, h2 {
 }
 
 .freebie .right-column {
-    background-color: #ffffff;
+    background-color: rgb(249, 247, 245);
 }
 
 .freebie-form {
@@ -610,7 +610,7 @@ textarea {
     }
 
     .hero-image img {
-        max-width: 250px;
+        max-width: 280px;
     }
 
     .hero-text h1 {
@@ -618,7 +618,7 @@ textarea {
     }
 
     .credentials {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
 
     .hero-tagline {
@@ -628,7 +628,11 @@ textarea {
     .philosophy {
         min-height: 100vh !important;
         padding: 60px 0;
-        background-color: rgb(236, 230, 225);
+        background-color: rgb(240, 235, 230);
+    }
+
+    .philosophy p {
+        font-size: 1.4rem;
     }
 
     .philosophy, .healing {
@@ -643,15 +647,15 @@ textarea {
     .pillars-grid {
         grid-template-columns: 1fr;
         gap: 35px;
-        max-width: 280px;
+        max-width: 320px;
         margin: 0 auto 40px;
         padding: 0 20px;
         justify-items: center;
     }
 
     .pillar-card {
-        width: 240px;
-        height: 240px;
+        width: 280px;
+        height: 280px;
     }
 
     .pillars h2 {
@@ -671,7 +675,7 @@ textarea {
 
     .freebie {
         min-height: 90vh !important;
-        background-color: #ffffff;
+        background-color: rgb(249, 247, 245);
     }
 
     .freebie .left-column {
@@ -687,7 +691,7 @@ textarea {
 
     .freebie .right-column {
         order: 1;
-        background-color: #ffffff;
+        background-color: rgb(249, 247, 245);
         width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
@@ -730,7 +734,7 @@ textarea {
     }
 
     .hero-image img {
-        max-width: 200px;
+        max-width: 230px;
     }
 
     .hero, .pillars, .freebie {
@@ -747,10 +751,14 @@ textarea {
     }
 
     .credentials {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
 
     .hero-tagline {
+        font-size: 1.2rem;
+    }
+
+    .philosophy p {
         font-size: 1.2rem;
     }
 
@@ -766,12 +774,12 @@ textarea {
     .philosophy {
         min-height: 100vh !important;
         padding: 40px 0;
-        background-color: rgb(236, 230, 225);
+        background-color: rgb(240, 235, 230);
     }
 
     .pillar-card {
-        width: 200px;
-        height: 200px;
+        width: 250px;
+        height: 250px;
     }
 
     .card-front, .card-back {
@@ -804,7 +812,7 @@ textarea {
     }
 
     .credentials {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
 
     .hero-tagline {
@@ -812,7 +820,11 @@ textarea {
     }
 
     .hero-image img {
-        max-width: 180px;
+        max-width: 200px;
+    }
+
+    .philosophy p {
+        font-size: 1rem;
     }
 
     .philosophy h2,
@@ -822,8 +834,8 @@ textarea {
     }
 
     .pillar-card {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
     }
 
     .pillar-icon {
