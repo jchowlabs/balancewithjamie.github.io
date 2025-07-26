@@ -1,3 +1,7 @@
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +28,10 @@ h1, h2 {
     font-family: 'Lato', sans-serif;
 }
 
+/* ========================================
+   LAYOUT COMPONENTS
+   ======================================== */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,6 +57,10 @@ h1, h2 {
     width: 100%;
 }
 
+/* ========================================
+   SECTION ANIMATIONS
+   ======================================== */
+
 .hero, .philosophy, .pillars, .healing, .freebie {
     min-height: 100vh;
     display: flex;
@@ -62,6 +74,10 @@ h1, h2 {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ========================================
+   BUTTONS
+   ======================================== */
 
 .btn {
     display: inline-block;
@@ -83,6 +99,10 @@ h1, h2 {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(107, 30, 120, 0.3);
 }
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
 
 .divider {
     width: 200px;
@@ -111,35 +131,73 @@ h1, h2 {
     font-size: 0.9em;
 }
 
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
 .hero {
-    padding: 0;
+    padding: 20px 20px 60px 20px;
     position: relative;
+    background-color: rgb(249, 247, 245);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 60px;
 }
 
-.hero .left-column {
-    background-color: rgba(249, 247, 245, 0.9);
-    background-image: url('./images/background.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -20px;
 }
 
-.hero .right-column {
-    background-color: #ffffff;
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.credentials {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #444;
+    margin: 0 0 30px 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .hero-image {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 480px;
-    border-radius: 10px;
+    max-width: 330px;
+    border-radius: 50%;
     box-shadow: 0 25px 40px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -149,46 +207,24 @@ h1, h2 {
     box-shadow: 0 30px 50px rgba(0,0,0,0.35);
 }
 
-.credentials {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #444;
-    margin-top: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.hero-text {
-    text-align: center;
-}
-
-.hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-    color: #222;
-    font-weight: 600;
-    font-family: 'Lato', sans-serif;
-    letter-spacing: 0.5px;
-    position: relative;
-    display: inline-block;
-}
-
-.hero-text p {
-    font-size: 1.65rem;
-    margin-bottom: 30px;
-    color: #444;
-    line-height: 1.4;
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+.hero-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 .hero-tagline {
-    font-size: 1.2em;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.65rem;
+    color: #444;
+    line-height: 1.4;
+    margin: 0;
+    letter-spacing: 0.5px;
 }
+
+/* ========================================
+   PHILOSOPHY SECTION
+   ======================================== */
 
 .philosophy {
     padding: 80px 0;
@@ -219,6 +255,10 @@ h1, h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
+/* ========================================
+   PILLARS SECTION
+   ======================================== */
 
 .pillars {
     padding: 80px 0;
@@ -353,6 +393,10 @@ h1, h2 {
     animation: autoFlip 3s ease-in-out;
 }
 
+/* ========================================
+   HEALING SECTION
+   ======================================== */
+
 .healing {
     padding: 80px 0;
     text-align: center;
@@ -399,6 +443,10 @@ h1, h2 {
     font-weight: 300;
 }
 
+/* ========================================
+   FREEBIE SECTION
+   ======================================== */
+
 .freebie {
     padding: 0;
 }
@@ -443,6 +491,10 @@ h1, h2 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
 
 .form-group {
     margin-bottom: 20px;
@@ -491,58 +543,9 @@ textarea {
     color: #999;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    cursor: pointer;
-    z-index: 10;
-    animation: bounce 2s infinite;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-.chevron {
-    width: 20px;
-    height: 2px;
-    background-color: transparent;
-    position: relative;
-}
-
-.chevron:before, .chevron:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #333;
-}
-
-.chevron:before {
-    left: 0;
-    transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
-    right: 0;
-    transform: skew(0deg, -30deg);
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateX(-50%);
-    }
-    40% {
-        transform: translateY(-15px) translateX(-50%);
-    }
-    60% {
-        transform: translateY(-7px) translateX(-50%);
-    }
-}
+/* ========================================
+   ANIMATIONS
+   ======================================== */
 
 @keyframes autoFlip {
     0% {
@@ -558,6 +561,10 @@ textarea {
         transform: rotateY(0deg);
     }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 
 @media (max-width: 1024px) {
     .pillars-grid {
@@ -591,35 +598,31 @@ textarea {
     }
 
     .hero {
-        background-color: #ffffff;
+        padding: 20px 20px 40px 20px;
         min-height: 90vh !important;
         margin-bottom: 0;
+        padding-top: 50px;
     }
 
-    .hero .left-column {
-        order: 2;
-        min-height: 50vh;
-        height: 50vh;
-        padding: 0;
-        margin: 0;
-        border: 0;
-        position: relative;
-        z-index: 0;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
+    .hero-container {
+        max-width: 100%;
+        margin-top: -15px;
     }
 
-    .hero .right-column {
-        order: 1;
-        background-color: #ffffff;
-        width: 100%;
-        padding-top: 30px;
-        padding-bottom: 30px;
+    .hero-image img {
+        max-width: 250px;
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+    }
+
+    .credentials {
+        font-size: 1.1rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.4rem;
     }
 
     .philosophy {
@@ -707,10 +710,6 @@ textarea {
         padding: 0;
     }
 
-    .scroll-indicator {
-        bottom: 10px;
-    }
-
     body {
         overflow-x: hidden;
     }
@@ -721,8 +720,17 @@ textarea {
         padding: 25px 15px;
     }
 
+    .hero {
+        padding: 15px 15px 30px 15px;
+        padding-top: 40px;
+    }
+
+    .hero-container {
+        margin-top: -10px;
+    }
+
     .hero-image img {
-        max-width: 280px;
+        max-width: 200px;
     }
 
     .hero, .pillars, .freebie {
@@ -734,14 +742,16 @@ textarea {
         padding: 40px 0;
     }
 
-    .hero .left-column {
-        min-height: 45vh;
-        height: 45vh;
+    .hero-text h1 {
+        font-size: 2.4rem;
     }
 
-    .freebie .left-column {
-        min-height: 45vh;
-        height: 45vh;
+    .credentials {
+        font-size: 0.95rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.2rem;
     }
 
     .freebie-form h2 {
@@ -790,17 +800,25 @@ textarea {
 
 @media (max-width: 375px) {
     .hero-text h1 {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+    }
+
+    .credentials {
+        font-size: 0.85rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 180px;
     }
 
     .philosophy h2,
     .healing h2,
     .freebie-form h2 {
         font-size: 2rem;
-    }
-
-    .hero-text p {
-        font-size: 1.3rem;
     }
 
     .pillar-card {
