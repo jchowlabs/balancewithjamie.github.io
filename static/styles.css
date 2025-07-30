@@ -619,7 +619,7 @@ textarea {
     }
 
     .hero-text h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-family: 'Merriweather', serif;
     }
 
@@ -662,6 +662,11 @@ textarea {
         font-size: 1.5rem;
     }
 
+    .philosophy h2,
+    .pillars h2 {
+        font-size: 2.3rem;
+    }
+
     .philosophy, .healing {
         padding: 60px 0;
     }
@@ -683,11 +688,6 @@ textarea {
     .pillar-card {
         width: 280px;
         height: 280px;
-    }
-
-    .pillars h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
     }
 
     .pillars-conclusion {
@@ -774,7 +774,7 @@ textarea {
     }
 
     .hero-text h1 {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
         font-family: 'Merriweather', serif;
     }
 
@@ -809,6 +809,11 @@ textarea {
 
     .philosophy p {
         font-size: 1.3rem;
+    }
+
+    .philosophy h2,
+    .pillars h2 {
+        font-size: 2rem;
     }
 
     .freebie-form h2 {
@@ -857,7 +862,7 @@ textarea {
 
 @media (max-width: 375px) {
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         font-family: 'Merriweather', serif;
     }
 
@@ -879,8 +884,9 @@ textarea {
 
     .philosophy h2,
     .healing h2,
+    .pillars h2,
     .freebie-form h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-family: 'Merriweather', serif;
     }
 
