@@ -638,6 +638,7 @@ textarea {
     .chevron-down {
         width: 18px;
         height: 18px;
+        margin: 0 auto -6px auto;
     }
 
     .chevron-down::before {
@@ -793,6 +794,7 @@ textarea {
     .chevron-down {
         width: 16px;
         height: 16px;
+        margin: 0 auto -5px auto;
     }
 
     .chevron-down::before {
