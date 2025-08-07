@@ -642,15 +642,15 @@ textarea {
     }
 
     .chevron-down::before {
-        width: 12px;
+        width: 11px;
         top: 8px;
-        left: 6px;
+        left: 8px;
     }
 
     .chevron-down::after {
-        width: 12px;
+        width: 11px;
         top: 8px;
-        right: 6px;
+        right: 8px;
     }
 
     .philosophy {
@@ -798,15 +798,15 @@ textarea {
     }
 
     .chevron-down::before {
-        width: 10px;
+        width: 9px;
         top: 7px;
-        left: 5px;
+        left: 7px;
     }
 
     .chevron-down::after {
-        width: 10px;
+        width: 9px;
         top: 7px;
-        right: 5px;
+        right: 7px;
     }
 
     .philosophy p {
