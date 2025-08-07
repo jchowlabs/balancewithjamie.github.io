@@ -632,25 +632,25 @@ textarea {
     }
 
     .scroll-indicator {
-        margin-top: 12px;
+        margin-top: 15px;
     }
     
     .chevron-down {
-        width: 27px;
-        height: 27px;
-        margin: 0 auto -9px auto;
+        width: 18px;
+        height: 18px;
+        margin: 0 auto -6px auto;
     }
 
     .chevron-down::before {
-        width: 11px;
-        top: 8px;
-        left: 8px;
+        width: 9px;
+        top: 5px;
+        left: 2px;
     }
 
     .chevron-down::after {
-        width: 11px;
-        top: 8px;
-        right: 8px;
+        width: 9px;
+        top: 5px;
+        right: 2px;
     }
 
     .philosophy {
@@ -788,25 +788,25 @@ textarea {
     }
 
     .scroll-indicator {
-        margin-top: 8px;
+        margin-top: 10px;
     }
     
     .chevron-down {
-        width: 24px;
-        height: 24px;
-        margin: 0 auto -8px auto;
+        width: 16px;
+        height: 16px;
+        margin: 0 auto -5px auto;
     }
 
     .chevron-down::before {
-        width: 9px;
-        top: 7px;
-        left: 7px;
+        width: 8px;
+        top: 4px;
+        left: 2px;
     }
 
     .chevron-down::after {
-        width: 9px;
-        top: 7px;
-        right: 7px;
+        width: 8px;
+        top: 4px;
+        right: 2px;
     }
 
     .philosophy p {
