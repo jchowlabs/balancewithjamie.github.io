@@ -636,21 +636,21 @@ textarea {
     }
     
     .chevron-down {
-        width: 22px;
-        height: 22px;
-        margin: 0 auto -7px auto;
+        width: 18px;
+        height: 18px;
+        margin: 0 auto -6px auto;
     }
 
     .chevron-down::before {
-        width: 11px;
-        top: 6px;
-        left: 3px;
+        width: 9px;
+        top: 5px;
+        left: 2px;
     }
 
     .chevron-down::after {
-        width: 11px;
-        top: 6px;
-        right: 3px;
+        width: 9px;
+        top: 5px;
+        right: 2px;
     }
 
     .philosophy {
@@ -792,21 +792,21 @@ textarea {
     }
     
     .chevron-down {
-        width: 20px;
-        height: 20px;
-        margin: 0 auto -6px auto;
+        width: 16px;
+        height: 16px;
+        margin: 0 auto -5px auto;
     }
 
     .chevron-down::before {
-        width: 10px;
-        top: 5px;
-        left: 3px;
+        width: 8px;
+        top: 4px;
+        left: 2px;
     }
 
     .chevron-down::after {
-        width: 10px;
-        top: 5px;
-        right: 3px;
+        width: 8px;
+        top: 4px;
+        right: 2px;
     }
 
     .philosophy p {
