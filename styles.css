@@ -1,0 +1,1100 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.signature-logo {
+  height: 48px;
+  width: auto;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b8a89a;
+  font-family: 'Arial', sans-serif;
+  margin-left: 4px;
+}
+
+.main-nav {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.main-nav li {
+  flex-shrink: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.site-logo {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 100px 60px 60px 60px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+  align-items: flex-start;
+  min-height: 500px;
+  margin-top: 40px;
+}
+
+/* Left column - Image container */
+.hero-image-container {
+  position: relative;
+  width: 420px;
+  height: 540px;
+  flex-shrink: 0;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.card-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.back-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 520px;
+  background: rgba(167, 127, 195, 0.15);
+  border-radius: 20px;
+  transform: rotate(-3deg);
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.front-card {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 350px;
+  height: 480px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Remove old hero image styles */
+.hero-image-placeholder {
+  display: none;
+}
+
+.hero-image-card {
+  display: none;
+}
+
+.hero-image-bg {
+  display: none;
+}
+
+/* Right column - Text content */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin: 0;
+  max-width: 100%;
+  padding-top: 30px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #444;
+  text-align: left;
+}
+
+/* Healing Section Styles */
+.healing-section {
+  background: rgb(251, 251, 253);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.healing-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.healing-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+  white-space: nowrap;
+}
+
+.healing-content h2 em {
+  font-style: italic;
+}
+
+.healing-underline {
+  width: 120px;
+  height: 2px;
+  background: #a77fc3;
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+}
+
+.healing-content p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Four Pillars Section Styles */
+.pillars-section {
+  background: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 60px 0;
+}
+
+.pillars-content {
+  max-width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.pillars-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.pillars-content h2 em {
+  font-style: italic;
+}
+
+.pillars-underline {
+  width: 120px;
+  height: 2px;
+  background: #a77fc3;
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 68px;
+  width: 100%;
+  max-width: none;
+}
+
+.pillar-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  perspective: 1000px;
+  cursor: pointer;
+  min-width: 262px;
+}
+
+.pillar-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+
+.pillar-card:hover .pillar-card-inner {
+  transform: rotateY(180deg);
+}
+
+.pillar-card-front, .pillar-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 46px 38px;
+  box-sizing: border-box;
+}
+
+.pillar-card-front {
+  background: rgba(167, 127, 195, 0.15);
+  text-align: center;
+}
+
+.pillar-card-back {
+  background: #8b5a9b;
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.pillar-card-front h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.54rem;
+  font-weight: 600;
+  margin: 0 0 27px 0;
+  color: #8b5a9b;
+  order: 1;
+  letter-spacing: 0.5px;
+}
+
+.pillar-icon {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+  order: 2;
+}
+
+.pillar-card-back p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: white;
+  margin: 0;
+  font-style: normal;
+}
+
+.pillars-bottom-text {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.pillars-bottom-text p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.pillars-bottom-text .balance-highlight {
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+/* Freebie Section Styles */
+.freebie-section {
+  background: rgb(251, 251, 253);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  box-sizing: border-box;
+}
+
+.freebie-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+  align-items: center;
+}
+
+.freebie-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.freebie-image {
+  width: 100%;
+  height: 100%;
+  max-height: 510px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.freebie-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 60px 40px;
+  background: rgb(251, 251, 253);
+}
+
+.freebie-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.4rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: #222;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.freebie-text p {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 32px;
+  line-height: 1.7;
+}
+
+.freebie-text p em {
+  font-style: italic;
+  color: #8b5a9b;
+  font-weight: 600;
+}
+
+.freebie-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.email-input {
+  padding: 18px 24px;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  background: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #8b5a9b;
+  box-shadow: 0 2px 12px rgba(139, 90, 155, 0.15);
+}
+
+.email-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.download-btn {
+  padding: 16px 32px;
+  background: #8b5a9b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.download-btn:hover {
+  background: #7a4a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 90, 155, 0.3);
+}
+
+.download-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .pillars-grid {
+    gap: 51px;
+  }
+  
+  .pillar-card {
+    min-width: 225px;
+  }
+  
+  .pillar-card-front h3 {
+    font-size: 1.38rem;
+  }
+  
+  .pillar-icon {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .pillar-card-back p {
+    font-size: 1.16rem;
+  }
+
+  .freebie-section {
+    padding: 60px 50px;
+  }
+
+  .freebie-content {
+    gap: 60px;
+  }
+
+  .freebie-text {
+    padding: 50px 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 15px 30px;
+  }
+  
+  .hero-section {
+    padding: 85px 30px 60px 30px;
+  }
+  
+  .hero-content {
+    gap: 60px;
+    margin-top: 35px;
+  }
+  
+  .hero-image-container {
+    width: 380px;
+    height: 480px;
+  }
+  
+  .back-card {
+    width: 360px;
+    height: 460px;
+  }
+  
+  .front-card {
+    width: 310px;
+    height: 420px;
+    top: 25px;
+  }
+  
+  .hero-text {
+    padding-top: 25px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.15rem;
+  }
+  
+  .healing-content {
+    max-width: 850px;
+  }
+  
+  .healing-content h2 {
+    font-size: 3.1rem;
+  }
+  
+  .healing-content p {
+    font-size: 1.15rem;
+  }
+  
+  .pillars-content {
+    max-width: 90%;
+    padding: 0 30px;
+  }
+  
+  .pillars-content h2 {
+    font-size: 3.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .pillars-grid {
+    gap: 34px;
+  }
+  
+  .pillar-card {
+    min-width: 188px;
+  }
+  
+  .pillar-card-front, .pillar-card-back {
+    padding: 38px 27px;
+    border-radius: 19px;
+  }
+  
+  .pillar-icon {
+    width: 57px;
+    height: 57px;
+  }
+  
+  .pillar-card-front h3 {
+    font-size: 1.27rem;
+    margin-bottom: 23px;
+  }
+  
+  .pillar-card-back p {
+    font-size: 1.06rem;
+  }
+  
+  .pillars-bottom-text p {
+    font-size: 1.15rem;
+  }
+
+  .freebie-section {
+    padding: 50px 30px;
+  }
+
+  .freebie-image {
+    max-height: 425px;
+  }
+
+  .freebie-text {
+    padding: 40px 20px;
+  }
+
+  .freebie-text h2 {
+    font-size: 3.1rem;
+  }
+
+  .freebie-text p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 15px 20px;
+  }
+  
+  .main-nav ul {
+    gap: 24px;
+  }
+  
+  .hero-section {
+    padding: 80px 30px 60px 30px;
+    min-height: auto;
+    align-items: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .hero-image-container {
+    width: 320px;
+    height: 410px;
+    margin: 0 auto;
+  }
+  
+  .back-card {
+    width: 300px;
+    height: 390px;
+  }
+  
+  .front-card {
+    width: 250px;
+    height: 350px;
+    top: 20px;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+    padding-top: 0;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  
+  .hero-text p {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .healing-content {
+    padding: 0 30px;
+    max-width: 700px;
+  }
+  
+  .healing-content h2 {
+    font-size: 2.8rem;
+    white-space: normal;
+  }
+  
+  .healing-content p {
+    font-size: 1.1rem;
+  }
+  
+  .pillars-section {
+    padding: 15px 0 50px 0;
+  }
+  
+  .pillars-content {
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  
+  .pillars-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .pillar-card {
+    min-width: 150px;
+  }
+  
+  .pillar-card-front, .pillar-card-back {
+    padding: 27px 19px;
+    border-radius: 15px;
+  }
+  
+  .pillar-icon {
+    width: 46px;
+    height: 46px;
+  }
+  
+  .pillar-card-front h3 {
+    font-size: 1.10rem;
+    margin-bottom: 19px;
+  }
+  
+  .pillar-card-back p {
+    font-size: 0.87rem;
+  }
+  
+  .pillars-bottom-text p {
+    font-size: 1.1rem;
+  }
+
+  .freebie-section {
+    padding: 50px 20px;
+    min-height: auto;
+  }
+
+  .freebie-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .freebie-image {
+    max-height: 340px;
+    border-radius: 8px;
+  }
+
+  .freebie-text {
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .freebie-text h2 {
+    font-size: 2.8rem;
+    white-space: normal;
+  }
+
+  .freebie-text p {
+    font-size: 1.1rem;
+  }
+
+  .freebie-form {
+    max-width: 350px;
+  }
+
+  .email-input {
+    padding: 16px 20px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 12px 15px;
+  }
+  
+  .main-nav ul {
+    gap: 20px;
+  }
+  
+  .hero-section {
+    padding: 75px 20px 40px 20px;
+  }
+  
+  .hero-content {
+    margin-top: 25px;
+  }
+  
+  .hero-image-container {
+    width: 280px;
+    height: 350px;
+  }
+  
+  .back-card {
+    width: 260px;
+    height: 330px;
+  }
+  
+  .front-card {
+    width: 220px;
+    height: 290px;
+    top: 18px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.05rem;
+  }
+  
+  .healing-content {
+    max-width: 600px;
+  }
+  
+  .healing-content h2 {
+    font-size: 2.4rem;
+  }
+  
+  .healing-content p {
+    font-size: 1.05rem;
+  }
+  
+  .pillars-section {
+    padding: 12px 0 40px 0;
+  }
+  
+  .pillars-content {
+    padding: 0 15px;
+  }
+  
+  .pillars-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+  
+  .pillar-card {
+    min-width: 234px;
+    max-width: 281px;
+    margin: 0 auto;
+  }
+  
+  .pillar-card-front, .pillar-card-back {
+    padding: 23px 17px;
+    border-radius: 13px;
+  }
+  
+  .pillar-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .pillar-card-front h3 {
+    font-size: 1.05rem;
+    margin-bottom: 17px;
+  }
+  
+  .pillar-card-back p {
+    font-size: 0.82rem;
+  }
+  
+  .pillars-bottom-text p {
+    font-size: 1.05rem;
+  }
+
+  .freebie-section {
+    padding: 40px 15px;
+  }
+
+  .freebie-content {
+    gap: 30px;
+  }
+
+  .freebie-image {
+    max-height: 255px;
+  }
+
+  .freebie-text {
+    padding: 25px 10px;
+  }
+
+  .freebie-text h2 {
+    font-size: 2.4rem;
+  }
+
+  .freebie-text p {
+    font-size: 1.05rem;
+  }
+
+  .freebie-form {
+    max-width: 300px;
+  }
+
+  .email-input, .download-btn {
+    padding: 14px 18px;
+    font-size: 0.95rem;
+  }
+
+  .email-input {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 10px 12px;
+  }
+  
+  .main-nav ul {
+    gap: 16px;
+  }
+  
+  .main-nav a {
+    font-size: 12px;
+  }
+  
+  .hero-section {
+    padding: 70px 15px 30px 15px;
+  }
+  
+  .hero-content {
+    margin-top: 20px;
+  }
+  
+  .hero-image-container {
+    width: 240px;
+    height: 310px;
+  }
+  
+  .back-card {
+    width: 220px;
+    height: 290px;
+  }
+  
+  .front-card {
+    width: 180px;
+    height: 250px;
+    top: 15px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .healing-content {
+    padding: 0 15px;
+    max-width: 500px;
+  }
+  
+  .healing-content h2 {
+    font-size: 2.1rem;
+  }
+  
+  .healing-content p {
+    font-size: 1rem;
+  }
+  
+  .pillars-section {
+    padding: 10px 0 30px 0;
+  }
+  
+  .pillars-content {
+    padding: 0 10px;
+  }
+  
+  .pillars-content h2 {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .pillars-grid {
+    gap: 17px;
+  }
+  
+  .pillar-card {
+    min-width: 188px;
+    max-width: 234px;
+  }
+  
+  .pillar-card-front, .pillar-card-back {
+    padding: 19px 14px;
+    border-radius: 12px;
+  }
+  
+  .pillar-icon {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .pillar-card-front h3 {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  
+  .pillar-card-back p {
+    font-size: 0.78rem;
+  }
+  
+  .pillars-bottom-text p {
+    font-size: 1rem;
+  }
+
+  .freebie-section {
+    padding: 30px 10px;
+  }
+
+  .freebie-content {
+    gap: 25px;
+  }
+
+  .freebie-image {
+    max-height: 213px;
+  }
+
+  .freebie-text {
+    padding: 20px 10px;
+  }
+
+  .freebie-text h2 {
+    font-size: 2.1rem;
+  }
+
+  .freebie-text p {
+    font-size: 1rem;
+  }
+
+  .freebie-form {
+    max-width: 280px;
+  }
+
+  .email-input, .download-btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}

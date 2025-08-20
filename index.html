@@ -1,239 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balance with Jamie</title>
-    <link rel="stylesheet" href="./static/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Tenor+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-002J8VYT3K');
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance With Jamie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-002J8VYT3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-002J8VYT3K');
+  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Welcome, I'm Jamie.</h1>
-                    <p class="credentials">Nurse | Health Coach | Lupus Warrior</p>
-                </div>
-                <div class="hero-image">
-                    <img src="./static/images/profile.jpeg" alt="Jamie's portrait">
-                </div>
-                <div class="hero-bottom">
-                    <p class="hero-tagline">Living with lupus can feel like a lot -<br><span class="bold-text">I'm here to support you.</span></p>
-                    <a href="https://calendly.com/balancewithjamie/30-minutes" class="btn">Let's Chat</a>
-                    <div class="scroll-indicator">
-                        <div class="chevron-down"></div>
-                        <div class="chevron-down"></div>
-                    </div>
-                </div>
+  <header class="site-header">
+    <div class="logo-container">
+      <a href="#" class="logo-link">
+        <img src="static/logo.png" alt="Balance With Jamie Logo" class="site-logo">
+      </a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#philosophy">MY PHILOSOPHY</a></li>
+        <li><a href="#pillars">FOUR PILLARS</a></li>
+        <li><a href="#resources">RESOURCES</a></li>
+        <li><a href="https://calendly.com/balancewithjamie/30-minutes">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero-section">
+    <div class="hero-content">
+      <div class="hero-image-container">
+        <div class="card-stack">
+          <div class="back-card"></div>
+          <div class="front-card">
+            <img src="static/profile.jpeg" alt="Jamie Profile" class="hero-profile-img">
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Finding Balance While<br>Living With Lupus.</h1>
+        <p>Hi, I'm Jamie. Living with lupus has shown me how hard it can be to find balance and care for yourself. As a registered nurse and health coach, I blend professional knowledge with personal experience to help you feel empowered, manage symptoms, and bring more calm into daily life.</p>
+      </div>
+    </div>
+  </main>
+  <section class="healing-section" id="philosophy">
+    <div class="healing-content">
+      <h2>
+        True healing starts from <em>within.</em>
+      </h2>
+      <div class="healing-underline"></div>
+      <p>
+        It's more than just medication - it's about nurturing your body with intention each day. Healing means looking beyond symptoms to understand the root cause, and building a lifestyle that nourishes your body, mind, and spirit.
+      </p>
+    </div>
+  </section>
+  <section class="pillars-section" id="pillars">
+    <div class="pillars-content">
+      <h2>
+        Health is built on <em>Four Pillars.</em>
+      </h2>
+      <div class="pillars-underline"></div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-card-inner">
+            <div class="pillar-card-front">
+              <h3>Food</h3>
+              <img src="static/food.png" alt="Food Icon" class="pillar-icon">
             </div>
-        </div>
-    </section>
-
-    <section class="philosophy">
-        <div class="container">
-            <h2>True healing starts from <em>within.</em></h2>
-            <div class="divider"></div>
-            <p>It's more than just medication - it's about nurturing your body with intention each day. Healing means looking beyond symptoms to understand the root cause, and building a lifestyle that nourishes your body, mind, and spirit.</p>
-        </div>
-    </section>
-
-    <section class="pillars">
-        <div class="container">
-            <h2>Health is built on <em>Four Pillars</em>.</h2>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3>Food</h3>
-                            <div class="pillar-icon">
-                                <img src="./static/images/food.png" alt="Food icon">
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p><em>Food is medicine</em>, providing your body with the right nutrients it needs to heal.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="pillar-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3>Sleep</h3>
-                            <div class="pillar-icon">
-                                <img src="./static/images/sleep.png" alt="Sleep icon">
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p><em>Quality sleep</em> is essential for restoring and repairing your body.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="pillar-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3>Stress Management</h3>
-                            <div class="pillar-icon">
-                                <img src="./static/images/stress.png" alt="Stress Management icon">
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p><em>Managing stress</em> helps reduce inflammation and supports your overall well-being.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="pillar-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <h3>Movement</h3>
-                            <div class="pillar-icon">
-                                <img src="./static/images/exercise.png" alt="Movement icon">
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <p><em>Movement</em> - whether gentle or active - helps keep your body resilient and strong.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="pillar-card-back">
+              <p>Food is medicine, providing your body with the right nutrients it needs to heal.</p>
             </div>
-            <p class="pillars-conclusion">When these four pillars are in <span class="bold-text">BALANCE</span>, your body has the best chance to thrive.</p>
+          </div>
         </div>
-    </section>
-
-    <section class="freebie">
-        <div class="two-column-layout">
-            <div class="column left-column"></div>
-            <div class="column right-column">
-                <div class="column-content freebie-form">
-                    <h2>Free Wellness Guide!</h2>
-                    <p>Learn how the <i>Four Pillars of Health</i> can support your body and help you feel more in control - one small step at a time.</p>
-                    <form id="wellness-tracker-form">
-                        <div class="form-group">
-                            <input type="email" name="user_email" id="user_email" class="form-control" placeholder="Email Address" required>
-                        </div>
-                        <button type="submit" class="btn" id="submit-btn">Download Now</button>
-                        <div id="form-status" class="response" style="display:none;"></div>
-                    </form>
-                </div>
+        <div class="pillar-card">
+          <div class="pillar-card-inner">
+            <div class="pillar-card-front">
+              <h3>Sleep</h3>
+              <img src="static/sleep.png" alt="Sleep Icon" class="pillar-icon">
             </div>
+            <div class="pillar-card-back">
+              <p>Quality sleep is essential for restoring and repairing your body.</p>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="pillar-card">
+          <div class="pillar-card-inner">
+            <div class="pillar-card-front">
+              <h3>Stress Management</h3>
+              <img src="static/stress.png" alt="Stress Management Icon" class="pillar-icon">
+            </div>
+            <div class="pillar-card-back">
+              <p>Managing stress helps reduce inflammation and supports your overall well-being.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card-inner">
+            <div class="pillar-card-front">
+              <h3>Movement</h3>
+              <img src="static/exercise.png" alt="Movement Icon" class="pillar-icon">
+            </div>
+            <div class="pillar-card-back">
+              <p>Movement - whether gentle or active - helps keep your body resilient and strong.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pillars-bottom-text">
+        <p>When these four pillars are in <span class="balance-highlight">BALANCE</span>, your body has the best chance to thrive.</p>
+      </div>
+    </div>
+  </section>
+  <section class="freebie-section" id="resources">
+    <div class="freebie-content">
+      <div class="freebie-image-container">
+        <img src="static/freebie.png" alt="Free Wellness Guide" class="freebie-image">
+      </div>
+      <div class="freebie-text">
+        <h2>Free Wellness Guide!</h2>
+        <p>Learn how the <em>Four Pillars of Health</em> can support your body and help you feel more in control - one small step at a time.</p>
+        <form class="freebie-form" id="wellness-tracker-form">
+          <input type="email" name="user_email" id="user_email" placeholder="Email Address" class="email-input" required>
+          <button type="submit" class="download-btn" id="submit-btn">Download Now</button>
+          <div id="form-status" class="response" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75 &&
-                rect.bottom >= 0
-            );
-        }
+  <script>
+    (function() {
+        emailjs.init("CklLL1WUpc6TzPzeO");
         
-        let pillarsAnimated = false;
-        
-        function handleScroll() {
-            const sections = document.querySelectorAll('.hero, .philosophy, .pillars, .healing, .freebie');
+        document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            sections.forEach(section => {
-                if (isInViewport(section)) {
-                    section.classList.add('section-visible');
+            const btn = document.getElementById('submit-btn');
+            const statusDiv = document.getElementById('form-status');
+            const originalBtnText = btn.textContent;
+            
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+            statusDiv.style.display = "block";
+            statusDiv.textContent = "Sending your wellness guide...";
+            statusDiv.className = "response";
+            
+            const emailValue = document.getElementById('user_email').value;
+            
+            const templateParams = {
+                to_email: emailValue,
+            };
+            
+            emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
+                .then(function() {
+                    statusDiv.textContent = "Your wellness guide is on its way!";
+                    statusDiv.className = "response success-response";
+                    btn.textContent = "Sent!";
+                    document.getElementById('wellness-tracker-form').reset();
                     
-                    if (section.classList.contains('pillars') && !pillarsAnimated) {
-                        setTimeout(() => {
-                            const firstCard = section.querySelector('.pillar-card');
-                            if (firstCard) {
-                                firstCard.classList.add('auto-flip');
-                                setTimeout(() => {
-                                    firstCard.classList.remove('auto-flip');
-                                }, 3000);
-                            }
-                        }, 500);
-                        pillarsAnimated = true;
-                    }
-                }
-            });
-        }
-        
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
-        window.addEventListener('touchmove', handleScroll);
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            const firstSection = document.querySelector('.hero');
-            if (firstSection) {
-                firstSection.classList.add('section-visible');
-            }
-            
-            // Add click handler for scroll indicator
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                scrollIndicator.addEventListener('click', function() {
-                    const philosophySection = document.querySelector('.philosophy');
-                    philosophySection.scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-        });
-    </script>
-    
-    <script>
-        (function() {
-            emailjs.init("CklLL1WUpc6TzPzeO");
-            
-            document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                const btn = document.getElementById('submit-btn');
-                const statusDiv = document.getElementById('form-status');
-                const originalBtnText = btn.textContent;
-                
-                btn.disabled = true;
-                btn.textContent = "Sending...";
-                statusDiv.style.display = "block";
-                statusDiv.textContent = "Sending your wellness guide...";
-                statusDiv.className = "response";
-                
-                const emailValue = document.getElementById('user_email').value;
-                
-                const templateParams = {
-                    to_email: emailValue,
-                };
-                
-                emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
-                    .then(function() {
-                        statusDiv.textContent = "Your wellness guide is on its way!";
-                        statusDiv.className = "response success-response";
-                        btn.textContent = "Sent!";
-                        document.getElementById('wellness-tracker-form').reset();
-                        
-                        setTimeout(function() {
-                            btn.disabled = false;
-                            btn.textContent = originalBtnText;
-                        }, 3000);
-                    })
-                    .catch(function(error) {
-                        console.error("EmailJS error:", error);
-                        statusDiv.textContent = "Please try again later.";
-                        statusDiv.className = "response error-response";
-                        
+                    setTimeout(function() {
                         btn.disabled = false;
                         btn.textContent = originalBtnText;
-                    });
-            });
-        })();
-    </script>
+                    }, 3000);
+                })
+                .catch(function(error) {
+                    console.error("EmailJS error:", error);
+                    statusDiv.textContent = "Please try again later.";
+                    statusDiv.className = "response error-response";
+                    
+                    btn.disabled = false;
+                    btn.textContent = originalBtnText;
+                });
+        });
+    })();
+  </script>
 </body>
 </html>
