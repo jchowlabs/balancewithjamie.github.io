@@ -84,6 +84,82 @@ body {
   display: block;
 }
 
+/* Mobile hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #222;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 80px 30px 30px 30px;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 25px;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav a:hover {
+  color: #8b5a9b;
+}
+
 .hero-section {
   display: flex;
   justify-content: center;
@@ -673,8 +749,17 @@ body {
     padding: 15px 20px;
   }
   
-  .main-nav ul {
-    gap: 24px;
+  /* Hide desktop nav and show hamburger */
+  .main-nav {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .mobile-nav {
+    display: block;
   }
   
   .hero-section {
@@ -753,30 +838,33 @@ body {
   
   .pillars-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
   }
   
   .pillar-card {
-    min-width: 150px;
+    min-width: 180px;
+    max-width: 280px;
   }
   
   .pillar-card-front, .pillar-card-back {
-    padding: 27px 19px;
+    padding: 30px 22px;
     border-radius: 15px;
   }
   
   .pillar-icon {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
   }
   
   .pillar-card-front h3 {
-    font-size: 1.10rem;
-    margin-bottom: 19px;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
   }
   
   .pillar-card-back p {
-    font-size: 0.87rem;
+    font-size: 0.95rem;
   }
   
   .pillars-bottom-text p {
@@ -795,7 +883,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 340px;
+    max-height: 357px; /* 5% larger than previous 340px */
     border-radius: 8px;
   }
 
@@ -827,10 +915,6 @@ body {
 @media (max-width: 600px) {
   .site-header {
     padding: 12px 15px;
-  }
-  
-  .main-nav ul {
-    gap: 20px;
   }
   
   .hero-section {
@@ -892,32 +976,33 @@ body {
   
   .pillars-grid {
     grid-template-columns: 1fr;
-    gap: 21px;
+    gap: 25px;
+    max-width: 320px;
   }
   
   .pillar-card {
-    min-width: 234px;
-    max-width: 281px;
+    min-width: 280px;
+    max-width: 320px;
     margin: 0 auto;
   }
   
   .pillar-card-front, .pillar-card-back {
-    padding: 23px 17px;
+    padding: 28px 20px;
     border-radius: 13px;
   }
   
   .pillar-icon {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
   }
   
   .pillar-card-front h3 {
-    font-size: 1.05rem;
-    margin-bottom: 17px;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
   }
   
   .pillar-card-back p {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
   }
   
   .pillars-bottom-text p {
@@ -933,7 +1018,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 255px;
+    max-height: 268px; /* 5% larger than previous 255px */
   }
 
   .freebie-text {
@@ -965,14 +1050,6 @@ body {
 @media (max-width: 480px) {
   .site-header {
     padding: 10px 12px;
-  }
-  
-  .main-nav ul {
-    gap: 16px;
-  }
-  
-  .main-nav a {
-    font-size: 12px;
   }
   
   .hero-section {
@@ -1034,31 +1111,32 @@ body {
   }
   
   .pillars-grid {
-    gap: 17px;
+    gap: 20px;
+    max-width: 260px;
   }
   
   .pillar-card {
-    min-width: 188px;
-    max-width: 234px;
+    min-width: 240px;
+    max-width: 260px;
   }
   
   .pillar-card-front, .pillar-card-back {
-    padding: 19px 14px;
+    padding: 25px 18px;
     border-radius: 12px;
   }
   
   .pillar-icon {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
   }
   
   .pillar-card-front h3 {
-    font-size: 1rem;
-    margin-bottom: 14px;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
   }
   
   .pillar-card-back p {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
   }
   
   .pillars-bottom-text p {
@@ -1074,7 +1152,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 213px;
+    max-height: 224px; /* 5% larger than previous 213px */
   }
 
   .freebie-text {

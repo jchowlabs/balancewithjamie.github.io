@@ -32,7 +32,22 @@
         <li><a href="https://calendly.com/balancewithjamie/30-minutes">CONTACT</a></li>
       </ul>
     </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#philosophy">MY PHILOSOPHY</a></li>
+      <li><a href="#pillars">FOUR PILLARS</a></li>
+      <li><a href="#resources">RESOURCES</a></li>
+      <li><a href="https://calendly.com/balancewithjamie/30-minutes">CONTACT</a></li>
+    </ul>
+  </nav>
+
   <main class="hero-section">
     <div class="hero-content">
       <div class="hero-image-container">
@@ -135,6 +150,36 @@
   </section>
 
   <script>
+    // Hamburger menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        
+        // Toggle functionality
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    });
+
+    // EmailJS functionality
     (function() {
         emailjs.init("CklLL1WUpc6TzPzeO");
         
