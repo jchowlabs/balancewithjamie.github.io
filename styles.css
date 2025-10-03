@@ -453,8 +453,8 @@ body {
   gap: 20px;
   width: 100%;
   max-width: 450px;
-  align-items: flex-start;
-  align-self: flex-start;
+  align-items: center;
+  align-self: center;
 }
 
 .email-input {
@@ -770,6 +770,7 @@ body {
     font-size: 2.8rem;
     margin-bottom: 13px;
     white-space: normal;
+    text-align: center;
   }
 
   .freebie-text p {
@@ -778,8 +779,8 @@ body {
 
   .freebie-form {
     max-width: 405px;
-    align-items: flex-start;
-    align-self: flex-start;
+    align-items: center;
+    align-self: center;
   }
 
   .email-input {
@@ -874,8 +875,8 @@ body {
 
   .freebie-form {
     max-width: 360px;
-    align-items: flex-start;
-    align-self: flex-start;
+    align-items: center;
+    align-self: center;
   }
 
   .email-input, .download-btn {
@@ -979,8 +980,8 @@ body {
 
   .freebie-form {
     max-width: 315px;
-    align-items: flex-start;
-    align-self: flex-start;
+    align-items: center;
+    align-self: center;
   }
 
   .email-input, .download-btn {
