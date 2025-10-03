@@ -469,6 +469,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   width: 100%;
   align-self: stretch;
+  max-width: 100%;
 }
 
 .email-input:focus {
@@ -731,7 +732,7 @@ body {
   }
 
   .wellness-text p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -774,7 +775,8 @@ body {
   }
 
   .freebie-text p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   .freebie-form {
@@ -786,6 +788,9 @@ body {
   .email-input {
     padding: 16px 20px;
     border-radius: 10px;
+    width: 90%;
+    max-width: 350px;
+    align-self: center;
   }
 }
 
@@ -891,6 +896,9 @@ body {
 
   .email-input {
     border-radius: 8px;
+    width: 85%;
+    max-width: 320px;
+    align-self: center;
   }
 }
 
@@ -992,5 +1000,11 @@ body {
   .download-btn {
     align-self: center;
     width: auto;
+  }
+
+  .email-input {
+    width: 80%;
+    max-width: 280px;
+    align-self: center;
   }
 }
