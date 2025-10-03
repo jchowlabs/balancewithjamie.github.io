@@ -21,7 +21,7 @@ body {
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  height: 80px;
+  height: 72px;
   box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ body {
 .signature-logo {
   height: 48px;
   width: auto;
-  margin-bottom: 4px;
+  margin: 4px;
 }
 
 .subtitle {
@@ -72,7 +72,7 @@ body {
 .main-nav a {
   text-decoration: none;
   color: #222;
-  font-size: 14px;
+  font-size: 17px;
   font-family: 'Montserrat', Arial, sans-serif;
   letter-spacing: 1px;
   transition: color 0.2s;
@@ -203,8 +203,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;
-  height: 520px;
+  width: 420px;
+  height: 546px;
   background: rgba(167, 127, 195, 0.15);
   border-radius: 20px;
   transform: rotate(-3deg);
@@ -216,8 +216,8 @@ body {
   position: absolute;
   top: 30px;
   right: 0;
-  width: 350px;
-  height: 480px;
+  width: 368px;
+  height: 504px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
@@ -259,7 +259,7 @@ body {
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
+  font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 32px;
@@ -267,7 +267,7 @@ body {
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   margin-bottom: 18px;
   color: #444;
@@ -302,201 +302,81 @@ body {
   transform: translateY(0);
 }
 
-/* Healing Section Styles */
-.healing-section {
+/* Wellness Section Styles */
+.wellness-section {
   background: rgb(251, 251, 253);
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 0;
-}
-
-.healing-content {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 60px;
-}
-
-.healing-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
-  font-weight: 400;
-  margin-bottom: 18px;
-  white-space: nowrap;
-}
-
-.healing-content h2 em {
-  font-style: italic;
-}
-
-.healing-underline {
-  width: 120px;
-  height: 2px;
-  background: #a77fc3;
-  margin: 0 auto 32px auto;
-  border-radius: 2px;
-}
-
-.healing-content p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.2rem;
-  color: #444;
-  margin: 0;
-  line-height: 1.7;
-}
-
-/* Four Pillars Section Styles */
-.pillars-section {
-  background: #fff;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0 60px 0;
-}
-
-.pillars-content {
-  max-width: 95%;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 40px;
-}
-
-.pillars-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
-  font-weight: 400;
-  margin-bottom: 18px;
-  color: #222;
-}
-
-.pillars-content h2 em {
-  font-style: italic;
-}
-
-.pillars-underline {
-  width: 120px;
-  height: 2px;
-  background: #a77fc3;
-  margin: 0 auto 32px auto;
-  border-radius: 2px;
-}
-
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 68px;
-  width: 100%;
-  max-width: none;
-}
-
-.pillar-card {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1;
-  perspective: 1000px;
-  cursor: pointer;
-  min-width: 262px;
-}
-
-.pillar-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1.2s;
-  transform-style: preserve-3d;
-}
-
-.pillar-card:hover .pillar-card-inner {
-  transform: rotateY(180deg);
-}
-
-.pillar-card-front, .pillar-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 46px 38px;
+  padding: 80px 60px;
   box-sizing: border-box;
 }
 
-.pillar-card-front {
-  background: rgba(167, 127, 195, 0.15);
-  text-align: center;
+.wellness-content {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  max-width: 1200px;
+  width: 100%;
+  gap: 80px;
+  align-items: center;
 }
 
-.pillar-card-back {
-  background: #8b5a9b;
-  color: white;
-  transform: rotateY(180deg);
-  text-align: center;
+.wellness-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  justify-content: center;
+  padding-right: 40px;
 }
 
-.pillar-card-front h3 {
+.wellness-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  text-align: left;
+  line-height: 1.1;
+}
+
+.wellness-text h2 em {
+  font-style: italic;
+}
+
+.wellness-text p {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.54rem;
-  font-weight: 600;
-  margin: 0 0 27px 0;
-  color: #8b5a9b;
-  order: 1;
-  letter-spacing: 0.5px;
-}
-
-.pillar-icon {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
-  order: 2;
-}
-
-.pillar-card-back p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: white;
+  font-size: 1.3rem;
+  color: #444;
   margin: 0;
-  font-style: normal;
+  line-height: 1.7;
+  text-align: left;
 }
 
-.pillars-bottom-text {
-  margin-top: 10px; 
-  margin-bottom: 30px;
+.wellness-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
 }
 
-.pillars-bottom-text p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: #666;
-  margin: 0;
-  text-align: center;
-}
-
-.pillars-bottom-text .balance-highlight {
-  font-weight: 700;
-  color: #222;
-  letter-spacing: 1px;
+.wellness-image {
+  width: 100%;
+  height: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* Freebie Section Styles */
+/* Freebie Section Styles */
 .freebie-section {
-  background: rgb(251, 251, 253);
+  background: #fff;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -517,19 +397,19 @@ body {
 
 .freebie-image-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 0;
-  margin: 0 auto;
+  padding: 0 20px 0 0;
+  margin: 0;
 }
 
 .freebie-image {
   width: 100%;
   height: 100%;
-  max-height: 510px;
+  max-height: 631px; /* 10% smaller than 701px */
   object-fit: contain;
   border-radius: 12px;
 }
@@ -538,25 +418,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   justify-content: center;
-  padding: 60px 40px;
-  background: rgb(251, 251, 253);
+  padding: 60px 36px 60px 24px;
+  background: #fff;
 }
 
 .freebie-text h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.4rem;
+  font-size: 3.5rem;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   color: #222;
   line-height: 1.1;
-  white-space: nowrap;
 }
 
 .freebie-text p {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #444;
   margin-bottom: 32px;
   line-height: 1.7;
@@ -573,7 +452,9 @@ body {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
+  align-items: flex-start;
+  align-self: flex-start;
 }
 
 .email-input {
@@ -586,6 +467,8 @@ body {
   background: white;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  align-self: stretch;
 }
 
 .email-input:focus {
@@ -611,6 +494,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  align-self: center;
+  width: auto;
 }
 
 .download-btn:hover {
@@ -625,25 +510,28 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1400px) {
-  .pillars-grid {
-    gap: 51px;
+  .wellness-section {
+    padding: 60px 50px;
   }
-  
-  .pillar-card {
-    min-width: 225px;
+
+  .wellness-content {
+    gap: 60px;
   }
-  
-  .pillar-card-front h3 {
-    font-size: 1.38rem;
+
+  .wellness-text {
+    padding-right: 30px;
   }
-  
-  .pillar-icon {
-    width: 65px;
-    height: 65px;
+
+  .wellness-text h2 {
+    font-size: 3.2rem;
   }
-  
-  .pillar-card-back p {
-    font-size: 1.16rem;
+
+  .wellness-text p {
+    font-size: 1.25rem;
+  }
+
+  .wellness-image {
+    max-height: 375px;
   }
 
   .freebie-section {
@@ -655,7 +543,9 @@ body {
   }
 
   .freebie-text {
-    padding: 50px 30px;
+    align-items: center;
+    text-align: left;
+    padding: 50px 24px 50px 18px;
   }
 }
 
@@ -684,8 +574,8 @@ body {
   }
   
   .front-card {
-    width: 310px;
-    height: 420px;
+    width: 326px;
+    height: 441px;
     top: 25px;
   }
   
@@ -694,64 +584,35 @@ body {
   }
   
   .hero-text h1 {
-    font-size: 3.1rem;
+    font-size: 3.2rem;
   }
   
   .hero-text p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
   
-  .healing-content {
-    max-width: 850px;
+  .wellness-section {
+    padding: 50px 30px;
   }
-  
-  .healing-content h2 {
+
+  .wellness-content {
+    gap: 60px;
+  }
+
+  .wellness-text {
+    padding-right: 20px;
+  }
+
+  .wellness-text h2 {
     font-size: 3.1rem;
   }
-  
-  .healing-content p {
+
+  .wellness-text p {
     font-size: 1.15rem;
   }
-  
-  .pillars-content {
-    max-width: 90%;
-    padding: 0 30px;
-  }
-  
-  .pillars-content h2 {
-    font-size: 3.1rem;
-    margin-bottom: 15px;
-  }
-  
-  .pillars-grid {
-    gap: 34px;
-  }
-  
-  .pillar-card {
-    min-width: 188px;
-  }
-  
-  .pillar-card-front, .pillar-card-back {
-    padding: 38px 27px;
-    border-radius: 19px;
-  }
-  
-  .pillar-icon {
-    width: 57px;
-    height: 57px;
-  }
-  
-  .pillar-card-front h3 {
-    font-size: 1.27rem;
-    margin-bottom: 23px;
-  }
-  
-  .pillar-card-back p {
-    font-size: 1.06rem;
-  }
-  
-  .pillars-bottom-text p {
-    font-size: 1.15rem;
+
+  .wellness-image {
+    max-height: 375px;
   }
 
   .freebie-section {
@@ -759,19 +620,22 @@ body {
   }
 
   .freebie-image {
-    max-height: 425px;
+    max-height: 527px; /* 10% smaller than 585px */
   }
 
   .freebie-text {
-    padding: 40px 20px;
+    align-items: center;
+    text-align: left;
+    padding: 40px 24px 40px 12px;
   }
 
   .freebie-text h2 {
-    font-size: 3.1rem;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
   }
 
   .freebie-text p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -819,8 +683,8 @@ body {
   }
   
   .front-card {
-    width: 250px;
-    height: 350px;
+    width: 263px;
+    height: 368px;
     top: 20px;
   }
   
@@ -830,80 +694,54 @@ body {
   }
   
   .hero-text h1 {
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     text-align: center;
   }
   
   .hero-text p {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .hero-btn {
     align-self: center;
   }
   
-  .healing-content {
-    padding: 0 30px;
-    max-width: 700px;
+  .wellness-section {
+    padding: 50px 20px;
+    min-height: auto;
   }
-  
-  .healing-content h2 {
+
+  .wellness-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .wellness-text {
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .wellness-text h2 {
     font-size: 2.8rem;
     white-space: normal;
+    text-align: center;
   }
-  
-  .healing-content p {
+
+  .wellness-text p {
     font-size: 1.1rem;
+    text-align: center;
   }
-  
-  .pillars-section {
-    padding: 15px 0 50px 0;
+
+  .wellness-image {
+    max-height: 315px;
+    border-radius: 8px;
   }
-  
-  .pillars-content {
-    padding: 0 20px;
-    max-width: 100%;
-  }
-  
-  .pillars-content h2 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-  }
-  
-  .pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .pillar-card {
-    min-width: 180px;
-    max-width: 280px;
-  }
-  
-  .pillar-card-front, .pillar-card-back {
-    padding: 30px 22px;
-    border-radius: 15px;
-  }
-  
-  .pillar-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .pillar-card-front h3 {
-    font-size: 1.15rem;
-    margin-bottom: 20px;
-  }
-  
-  .pillar-card-back p {
-    font-size: 0.95rem;
-  }
-  
-  .pillars-bottom-text p {
-    font-size: 1.1rem;
+
+  .wellness-image-container {
+    height: auto;
   }
 
   .freebie-section {
@@ -918,18 +756,19 @@ body {
   }
 
   .freebie-image {
-    max-height: 357px; /* 5% larger than previous 340px */
+    max-height: 442px; /* 10% smaller than 491px */
     border-radius: 8px;
   }
 
   .freebie-text {
     align-items: center;
-    text-align: center;
-    padding: 30px 10px;
+    text-align: left;
+    padding: 30px 22px 30px 12px;
   }
 
   .freebie-text h2 {
     font-size: 2.8rem;
+    margin-bottom: 13px;
     white-space: normal;
   }
 
@@ -938,7 +777,9 @@ body {
   }
 
   .freebie-form {
-    max-width: 350px;
+    max-width: 405px;
+    align-items: flex-start;
+    align-self: flex-start;
   }
 
   .email-input {
@@ -971,77 +812,37 @@ body {
   }
   
   .front-card {
-    width: 220px;
-    height: 290px;
+    width: 231px;
+    height: 305px;
     top: 18px;
   }
   
   .hero-text h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
   
   .hero-text p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
   
-  .healing-content {
-    max-width: 600px;
+  .wellness-section {
+    padding: 40px 15px;
   }
-  
-  .healing-content h2 {
+
+  .wellness-content {
+    gap: 30px;
+  }
+
+  .wellness-text h2 {
     font-size: 2.4rem;
   }
-  
-  .healing-content p {
+
+  .wellness-text p {
     font-size: 1.05rem;
   }
-  
-  .pillars-section {
-    padding: 12px 0 40px 0;
-  }
-  
-  .pillars-content {
-    padding: 0 15px;
-  }
-  
-  .pillars-content h2 {
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-  }
-  
-  .pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    max-width: 320px;
-  }
-  
-  .pillar-card {
-    min-width: 280px;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-  
-  .pillar-card-front, .pillar-card-back {
-    padding: 28px 20px;
-    border-radius: 13px;
-  }
-  
-  .pillar-icon {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .pillar-card-front h3 {
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-  }
-  
-  .pillar-card-back p {
-    font-size: 0.9rem;
-  }
-  
-  .pillars-bottom-text p {
-    font-size: 1.05rem;
+
+  .wellness-image {
+    max-height: 235px;
   }
 
   .freebie-section {
@@ -1053,15 +854,18 @@ body {
   }
 
   .freebie-image {
-    max-height: 268px; /* 5% larger than previous 255px */
+    max-height: 332px; /* 10% smaller than 369px */
   }
 
   .freebie-text {
-    padding: 25px 10px;
+    align-items: center;
+    text-align: left;
+    padding: 25px 15px 25px 10px;
   }
 
   .freebie-text h2 {
     font-size: 2.4rem;
+    margin-bottom: 12px;
   }
 
   .freebie-text p {
@@ -1069,12 +873,19 @@ body {
   }
 
   .freebie-form {
-    max-width: 300px;
+    max-width: 360px;
+    align-items: flex-start;
+    align-self: flex-start;
   }
 
   .email-input, .download-btn {
     padding: 14px 18px;
     font-size: 0.95rem;
+  }
+
+  .download-btn {
+    align-self: center;
+    width: auto;
   }
 
   .email-input {
@@ -1106,76 +917,37 @@ body {
   }
   
   .front-card {
-    width: 180px;
-    height: 250px;
+    width: 189px;
+    height: 263px;
     top: 15px;
   }
   
   .hero-text h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
   
   .hero-text p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   
-  .healing-content {
-    padding: 0 15px;
-    max-width: 500px;
+  .wellness-section {
+    padding: 30px 10px;
   }
-  
-  .healing-content h2 {
+
+  .wellness-content {
+    gap: 25px;
+  }
+
+  .wellness-text h2 {
     font-size: 2.1rem;
   }
-  
-  .healing-content p {
+
+  .wellness-text p {
     font-size: 1rem;
   }
-  
-  .pillars-section {
-    padding: 10px 0 30px 0;
-  }
-  
-  .pillars-content {
-    padding: 0 10px;
-  }
-  
-  .pillars-content h2 {
-    font-size: 2.1rem;
-    margin-bottom: 15px;
-  }
-  
-  .pillars-grid {
-    gap: 20px;
-    max-width: 260px;
-  }
-  
-  .pillar-card {
-    min-width: 240px;
-    max-width: 260px;
-  }
-  
-  .pillar-card-front, .pillar-card-back {
-    padding: 25px 18px;
-    border-radius: 12px;
-  }
-  
-  .pillar-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .pillar-card-front h3 {
-    font-size: 1.05rem;
-    margin-bottom: 16px;
-  }
-  
-  .pillar-card-back p {
-    font-size: 0.85rem;
-  }
-  
-  .pillars-bottom-text p {
-    font-size: 1rem;
+
+  .wellness-image {
+    max-height: 200px;
   }
 
   .freebie-section {
@@ -1187,15 +959,18 @@ body {
   }
 
   .freebie-image {
-    max-height: 224px; /* 5% larger than previous 213px */
+    max-height: 277px; /* 10% smaller than 308px */
   }
 
   .freebie-text {
-    padding: 20px 10px;
+    align-items: center;
+    text-align: left;
+    padding: 20px 15px 20px 10px;
   }
 
   .freebie-text h2 {
     font-size: 2.1rem;
+    margin-bottom: 10px;
   }
 
   .freebie-text p {
@@ -1203,11 +978,18 @@ body {
   }
 
   .freebie-form {
-    max-width: 280px;
+    max-width: 315px;
+    align-items: flex-start;
+    align-self: flex-start;
   }
 
   .email-input, .download-btn {
     padding: 12px 16px;
     font-size: 0.9rem;
+  }
+
+  .download-btn {
+    align-self: center;
+    width: auto;
   }
 }
