@@ -87,7 +87,6 @@ body {
   display: block;
 }
 
-/* Mobile hamburger menu styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -233,7 +232,6 @@ body {
   display: block;
 }
 
-/* Remove old hero image styles */
 .hero-image-placeholder {
   display: none;
 }
@@ -245,8 +243,6 @@ body {
 .hero-image-bg {
   display: none;
 }
-
-/* Right column - Text content */
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -302,7 +298,6 @@ body {
   transform: translateY(0);
 }
 
-/* Wellness Section Styles */
 .wellness-section {
   background: rgb(251, 251, 253);
   width: 100%;
@@ -373,8 +368,6 @@ body {
   border-radius: 12px;
 }
 
-/* Freebie Section Styles */
-/* Freebie Section Styles */
 .freebie-section {
   background: #fff;
   width: 100%;
@@ -409,7 +402,7 @@ body {
 .freebie-image {
   width: 100%;
   height: 100%;
-  max-height: 631px; /* 10% smaller than 701px */
+  max-height: 631px;
   object-fit: contain;
   border-radius: 12px;
 }
@@ -509,7 +502,6 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 1400px) {
   .wellness-section {
     padding: 60px 50px;
@@ -621,7 +613,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 527px; /* 10% smaller than 585px */
+    max-height: 527px;
   }
 
   .freebie-text {
@@ -645,7 +637,6 @@ body {
     padding: 15px 20px;
   }
   
-  /* Hide desktop nav and show hamburger */
   .main-nav {
     display: none;
   }
@@ -723,6 +714,7 @@ body {
     align-items: center;
     text-align: center;
     padding-right: 0;
+    order: 2;
   }
 
   .wellness-text h2 {
@@ -743,6 +735,7 @@ body {
 
   .wellness-image-container {
     height: auto;
+    order: 1;
   }
 
   .freebie-section {
@@ -757,7 +750,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 442px; /* 10% smaller than 491px */
+    max-height: 442px;
     border-radius: 8px;
   }
 
@@ -860,7 +853,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 332px; /* 10% smaller than 369px */
+    max-height: 332px;
   }
 
   .freebie-text {
@@ -968,7 +961,7 @@ body {
   }
 
   .freebie-image {
-    max-height: 277px; /* 10% smaller than 308px */
+    max-height: 277px;
   }
 
   .freebie-text {
