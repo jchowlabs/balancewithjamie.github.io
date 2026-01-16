@@ -558,6 +558,10 @@ body {
     text-align: center;
   }
   
+  .jamie-content {
+    grid-template-columns: 1fr;
+  }
+  
   .jamie-image {
     display: flex;
     justify-content: center;
