@@ -1,1003 +1,698 @@
-/* filepath: /Users/jchow/Documents/GitHub/balancewithjamie.github.io/styles.css */
-body {
+* {
   margin: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
-  background: #fff;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.site-header {
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ============================================
+   SECTION ONE: HERO + DOES THIS SOUND FAMILIAR
+   ============================================ */
+
+.section-one {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f3f0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  flex: 1;
+  background-image: url('static/wellness.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  position: fixed;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.hero-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  height: 72px;
-  box-sizing: border-box;
-}
-
-.logo-container {
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.25);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.signature-logo {
-  height: 48px;
-  width: auto;
-  margin: 4px;
-}
-
-.subtitle {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #b8a89a;
-  font-family: 'Arial', sans-serif;
-  margin-left: 4px;
-}
-
-.main-nav {
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.main-nav::-webkit-scrollbar {
-  display: none;
-}
-
-.main-nav ul {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  min-width: max-content;
-}
-
-.main-nav li {
-  flex-shrink: 0;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #222;
-  font-size: 17px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  letter-spacing: 1px;
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-
-.site-logo {
-  height: 60px;
-  width: auto;
-  max-width: 180px;
-  margin-bottom: 4px;
-  display: block;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #222;
-  margin: 3px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 80px 30px 30px 30px;
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease;
-  z-index: 999;
-}
-
-.mobile-nav.active {
-  right: 0;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.mobile-nav li {
-  margin-bottom: 25px;
-}
-
-.mobile-nav a {
-  text-decoration: none;
-  color: #222;
-  font-size: 16px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  letter-spacing: 1px;
-  transition: color 0.2s;
-  display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mobile-nav a:hover {
-  color: #8b5a9b;
-}
-
-.hero-section {
-  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 100px 60px 60px 60px;
-  box-sizing: border-box;
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1200px;
-  width: 100%;
-  gap: 80px;
-  align-items: flex-start;
-  min-height: 500px;
-  margin-top: 40px;
-}
-
-/* Left column - Image container */
-.hero-image-container {
-  position: relative;
-  width: 420px;
-  height: 540px;
-  flex-shrink: 0;
-  justify-self: center;
-  align-self: flex-start;
-}
-
-.card-stack {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.back-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 420px;
-  height: 546px;
-  background: rgba(167, 127, 195, 0.15);
-  border-radius: 20px;
-  transform: rotate(-3deg);
+  text-align: center;
+  max-width: 1100px;
+  padding: 20px 40px;
   z-index: 1;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
-.front-card {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  width: 368px;
-  height: 504px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-  z-index: 2;
-  overflow: hidden;
-}
-
-.hero-profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-.hero-image-placeholder {
-  display: none;
-}
-
-.hero-image-card {
-  display: none;
-}
-
-.hero-image-bg {
-  display: none;
-}
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-self: flex-start;
-  margin: 0;
-  max-width: 100%;
-  padding-top: 30px;
-}
-
-.hero-text h1 {
+.hero-content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 400;
-  line-height: 1.1;
-  margin-bottom: 32px;
-  text-align: left;
+  color: #4d4d4d;
+  margin-bottom: 15px;
+  line-height: 1.15;
 }
 
-.hero-text p {
-  font-size: 1.3rem;
-  line-height: 1.7;
-  margin-bottom: 18px;
-  color: #444;
-  text-align: left;
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 25px;
 }
 
-.hero-btn {
+.cta-button {
   display: inline-block;
-  padding: 16px 32px;
-  background: #662d91;
+  padding: 12px 35px;
+  background: #6b5b95;
   color: white;
   text-decoration: none;
   border-radius: 50px;
-  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  margin-top: 24px;
-  text-align: center;
-  width: fit-content;
-  align-self: center;
+  transition: all 0.3s ease;
+  margin-bottom: 12px;
 }
 
-.hero-btn:hover {
-  background: #552580;
+.cta-button:hover {
+  background: #5a4a7f;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.3);
+  box-shadow: 0 6px 20px rgba(107, 91, 149, 0.4);
 }
 
-.hero-btn:active {
-  transform: translateY(0);
+.hero-footnote {
+  font-size: 0.9rem;
+  color: #777;
 }
 
-.wellness-section {
-  background: rgb(251, 251, 253);
+.wave-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 60px;
-  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.wellness-content {
-  display: grid;
-  grid-template-columns: 55fr 45fr;
-  max-width: 1200px;
+.wave-divider svg {
+  display: block;
   width: 100%;
-  gap: 80px;
-  align-items: center;
+  height: 80px;
 }
 
-.wellness-text {
+/* Does this sound familiar Section */
+.familiar {
+  background: #f5f3f0;
+  padding: 15px 60px 60px 60px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
   justify-content: center;
-  padding-right: 40px;
 }
 
-.wellness-text h2 {
+.familiar h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 1.65rem;
   font-weight: 400;
-  margin-bottom: 32px;
-  text-align: left;
-  line-height: 1.1;
+  color: #4d4d4d;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-.wellness-text h2 em {
+.familiar h2::before,
+.familiar h2::after {
+  content: '';
+  flex: 0 0 160px;
+  height: 2px;
+  background: #bbb;
+}
+
+.familiar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.familiar-grid::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d4d4d4;
+  transform: translateX(-50%);
+}
+
+.familiar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.familiar-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  padding-top: 8px;
+}
+
+/* ============================================
+   SECTION TWO: JAMIE + GUIDE + HELP
+   ============================================ */
+
+.section-two {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid #fff;
+}
+
+/* Jamie Section */
+.jamie {
+  background: #f9f7f4;
+  padding: 50px 0 70px 0;
+  width: 100%;
+  position: relative;
+}
+
+.jamie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.jamie-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 8px solid #fff;
+}
+
+.jamie-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.jamie-text h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d4d4d4;
+}
+
+.jamie-text h2 em {
   font-style: italic;
 }
 
-.wellness-text p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.3rem;
+.jamie-text p {
+  font-size: 1.1rem;
   color: #444;
-  margin: 0;
-  line-height: 1.7;
-  text-align: left;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d4d4d4;
 }
 
-.wellness-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.jamie-text p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.wave-divider-jamie {
+  position: relative;
   width: 100%;
-  height: auto;
   overflow: hidden;
-  padding: 0;
-  margin: 0 auto;
+  line-height: 0;
+  background: #f9f7f4;
 }
 
-.wellness-image {
+.wave-divider-jamie svg {
+  display: block;
   width: 100%;
-  height: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 12px;
+  height: 80px;
 }
 
-.freebie-section {
+/* Guide Section */
+.guide {
   background: #fff;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 60px;
-  box-sizing: border-box;
+  padding: 60px 80px 0 80px;
+  position: relative;
+  overflow: hidden;
 }
 
-.freebie-content {
+.guide-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 40px;
   max-width: 1200px;
-  width: 100%;
-  gap: 80px;
+  margin: 0 auto;
   align-items: center;
 }
 
-.freebie-image-container {
+.guide-text {
+  text-align: center;
+  padding-right: 40px;
+  margin-top: -60px;
+}
+
+.guide h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 18px;
+  margin-left: 0;
+  position: relative;
+}
+
+.guide-subtitle {
+  font-size: 1.15rem;
+  color: #666;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.guide-button {
+  display: inline-block;
+  padding: 16px 45px;
+  background: #7a9b6a;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.guide-button:hover {
+  background: #668554;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(122, 155, 106, 0.4);
+}
+
+.guide-image-container {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0 20px 0 0;
-  margin: 0;
-}
-
-.freebie-image {
-  width: 100%;
-  height: 100%;
-  max-height: 631px;
-  object-fit: contain;
-  border-radius: 12px;
-}
-
-.freebie-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
   justify-content: center;
-  padding: 60px 36px 60px 24px;
+  height: 350px;
+}
+
+.guide-image {
+  max-width: 63%;
+  height: auto;
+  object-fit: contain;
+}
+
+.wave-divider-guide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
   background: #fff;
 }
 
-.freebie-text h2 {
+.wave-divider-guide svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+}
+
+/* Help Section */
+.help {
+  background: #f5f3f0;
+  padding: 60px 80px;
+}
+
+.help h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 2.4rem;
   font-weight: 400;
-  margin-bottom: 16px;
-  color: #222;
-  line-height: 1.1;
+  color: #333;
+  text-align: left;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.freebie-text p {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.3rem;
+.help h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.help-grid::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d4d4d4;
+  transform: translateX(-50%);
+}
+
+.help-left p {
+  font-size: 1.15rem;
   color: #444;
-  margin-bottom: 32px;
-  line-height: 1.7;
+  line-height: 1.75;
+  margin-bottom: 18px;
 }
 
-.freebie-text p em {
+.help-left em {
   font-style: italic;
-  color: #8b5a9b;
-  font-weight: 600;
 }
 
-.freebie-form {
+.help-right ul {
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.help-right li {
+  font-size: 1.08rem;
+  color: #444;
+  line-height: 2;
+  padding-left: 25px;
+  position: relative;
+}
+
+.help-right li::before {
+  content: '●';
+  color: #7a9b6a;
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+}
+
+.help-right {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 450px;
-  align-items: flex-start;
-  align-self: flex-start;
+  align-items: center;
 }
 
-.email-input {
-  padding: 18px 24px;
-  border: 1px solid #d4d4d4;
-  border-radius: 12px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  color: #666;
-  background: white;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  width: 100%;
-  align-self: stretch;
-  max-width: 100%;
-}
-
-.email-input:focus {
-  outline: none;
-  border-color: #8b5a9b;
-  box-shadow: 0 2px 12px rgba(139, 90, 155, 0.15);
-}
-
-.email-input::placeholder {
-  color: #999;
-  font-weight: 400;
-}
-
-.download-btn {
-  padding: 16px 32px;
-  background: #662d91;
+.chat-btn {
+  display: inline-block;
+  padding: 16px 45px;
+  background: #6b5b95;
   color: white;
-  border: none;
+  text-decoration: none;
   border-radius: 50px;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  align-self: center;
-  width: auto;
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
 }
 
-.download-btn:hover {
-  background: #552580;
+.chat-btn:hover {
+  background: #5a4a7f;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 45, 145, 0.3);
+  box-shadow: 0 6px 20px rgba(107, 91, 149, 0.4);
 }
 
-.download-btn:active {
-  transform: translateY(0);
+.help-note {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
 }
 
-@media (max-width: 1400px) {
-  .wellness-section {
-    padding: 60px 50px;
-  }
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
-  .wellness-content {
+@media (max-width: 1200px) {
+  .familiar h2::before,
+  .familiar h2::after,
+  .guide h2::before,
+  .guide h2::after,
+  .help h2::before,
+  .help h2::after {
+    width: 100px;
+  }
+  
+  .jamie {
+    padding: 50px 60px;
     gap: 60px;
   }
-
-  .wellness-text {
-    padding-right: 30px;
-  }
-
-  .wellness-text h2 {
-    font-size: 3.2rem;
-  }
-
-  .wellness-text p {
-    font-size: 1.25rem;
-  }
-
-  .wellness-image {
-    max-height: 375px;
-  }
-
-  .freebie-section {
-    padding: 60px 50px;
-  }
-
-  .freebie-content {
-    gap: 60px;
-  }
-
-  .freebie-text {
-    align-items: center;
-    text-align: left;
-    padding: 50px 24px 50px 18px;
+  
+  .guide,
+  .help {
+    padding: 50px 60px;
   }
 }
 
 @media (max-width: 1024px) {
-  .site-header {
-    padding: 15px 30px;
+  .hero-content h1 {
+    font-size: 3.5rem;
   }
   
-  .hero-section {
-    padding: 85px 30px 60px 30px;
+  .familiar {
+    padding: 35px 40px 50px 40px;
   }
   
-  .hero-content {
-    gap: 60px;
-    margin-top: 35px;
+  .familiar h2 {
+    font-size: 2.5rem;
   }
   
-  .hero-image-container {
-    width: 380px;
-    height: 480px;
+  .jamie {
+    grid-template-columns: 300px 1fr;
+    gap: 50px;
+    padding: 50px 40px;
   }
   
-  .back-card {
-    width: 360px;
-    height: 460px;
-  }
-  
-  .front-card {
-    width: 326px;
-    height: 441px;
-    top: 25px;
-  }
-  
-  .hero-text {
-    padding-top: 25px;
-  }
-  
-  .hero-text h1 {
-    font-size: 3.2rem;
-  }
-  
-  .hero-text p {
-    font-size: 1.25rem;
-  }
-  
-  .wellness-section {
-    padding: 50px 30px;
-  }
-
-  .wellness-content {
-    gap: 60px;
-  }
-
-  .wellness-text {
-    padding-right: 20px;
-  }
-
-  .wellness-text h2 {
-    font-size: 3.1rem;
-  }
-
-  .wellness-text p {
-    font-size: 1.15rem;
-  }
-
-  .wellness-image {
-    max-height: 375px;
-  }
-
-  .freebie-section {
-    padding: 50px 30px;
-  }
-
-  .freebie-image {
-    max-height: 527px;
-  }
-
-  .freebie-text {
-    align-items: center;
-    text-align: left;
-    padding: 40px 24px 40px 12px;
-  }
-
-  .freebie-text h2 {
-    font-size: 3.2rem;
-    margin-bottom: 15px;
-  }
-
-  .freebie-text p {
-    font-size: 1.25rem;
+  .jamie-text h2 {
+    font-size: 2.8rem;
   }
 }
 
 @media (max-width: 768px) {
-  .site-header {
-    padding: 15px 20px;
+  .hero-content h1 {
+    font-size: 3rem;
   }
   
-  .main-nav {
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .familiar {
+    padding: 30px 30px 40px 30px;
+  }
+  
+  .familiar h2 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+  
+  .familiar h2::before,
+  .familiar h2::after {
     display: none;
   }
   
-  .hamburger {
+  .familiar-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .jamie {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+    gap: 35px;
+    text-align: center;
+  }
+  
+  .jamie-image {
     display: flex;
+    justify-content: center;
   }
   
-  .mobile-nav {
-    display: block;
+  .jamie-image img {
+    max-width: 280px;
   }
   
-  .hero-section {
-    padding: 80px 30px 60px 30px;
-    min-height: auto;
-    align-items: center;
+  .jamie-text h2 {
+    font-size: 2.5rem;
   }
   
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    margin-top: 30px;
+  .jamie-text p {
+    font-size: 1.15rem;
   }
   
-  .hero-image-container {
-    width: 320px;
-    height: 410px;
-    margin: 0 auto;
+  .guide,
+  .help {
+    padding: 40px 30px;
   }
   
-  .back-card {
-    width: 300px;
-    height: 390px;
+  .guide h2,
+  .help h2 {
+    font-size: 2.2rem;
   }
   
-  .front-card {
-    width: 263px;
-    height: 368px;
-    top: 20px;
+  .guide h2::before,
+  .guide h2::after,
+  .help h2::before,
+  .help h2::after {
+    display: none;
   }
   
-  .hero-text {
-    max-width: 100%;
-    padding-top: 0;
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
   
-  .hero-text h1 {
-    font-size: 2.9rem;
+  .help-left,
+  .help-right {
     text-align: center;
   }
   
-  .hero-text p {
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .hero-btn {
-    align-self: center;
-  }
-  
-  .wellness-section {
-    padding: 50px 20px;
-    min-height: auto;
-  }
-
-  .wellness-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .wellness-text {
-    align-items: center;
-    text-align: center;
-    padding-right: 0;
-    order: 2;
-  }
-
-  .wellness-text h2 {
-    font-size: 2.8rem;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .wellness-text p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .wellness-image {
-    max-height: 315px;
-    border-radius: 8px;
-  }
-
-  .wellness-image-container {
-    height: auto;
-    order: 1;
-  }
-
-  .freebie-section {
-    padding: 50px 20px;
-    min-height: auto;
-  }
-
-  .freebie-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .freebie-image {
-    max-height: 442px;
-    border-radius: 8px;
-  }
-
-  .freebie-text {
-    align-items: center;
+  .help-right li {
     text-align: left;
-    padding: 30px 22px 30px 12px;
-  }
-
-  .freebie-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 13px;
-    white-space: normal;
-    text-align: center;
-  }
-
-  .freebie-text p {
-    font-size: 1.2rem;
-    text-align: center;
-  }
-
-  .freebie-form {
-    max-width: 405px;
-    align-items: center;
-    align-self: center;
-  }
-
-  .email-input {
-    padding: 16px 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 350px;
-    align-self: center;
   }
 }
 
 @media (max-width: 600px) {
-  .site-header {
-    padding: 12px 15px;
-  }
-  
-  .hero-section {
-    padding: 75px 20px 40px 20px;
-  }
-  
-  .hero-content {
-    margin-top: 25px;
-  }
-  
-  .hero-image-container {
-    width: 280px;
-    height: 350px;
-  }
-  
-  .back-card {
-    width: 260px;
-    height: 330px;
-  }
-  
-  .front-card {
-    width: 231px;
-    height: 305px;
-    top: 18px;
-  }
-  
-  .hero-text h1 {
+  .hero-content h1 {
     font-size: 2.5rem;
   }
   
-  .hero-text p {
-    font-size: 1.15rem;
+  .hero-subtitle {
+    font-size: 1.2rem;
   }
   
-  .wellness-section {
-    padding: 40px 15px;
+  .cta-button,
+  .guide-button,
+  .chat-button {
+    padding: 14px 35px;
+    font-size: 1rem;
   }
-
-  .wellness-content {
-    gap: 30px;
+  
+  .familiar {
+    padding: 25px 20px 35px 20px;
   }
-
-  .wellness-text h2 {
-    font-size: 2.4rem;
+  
+  .familiar h2 {
+    font-size: 2rem;
   }
-
-  .wellness-text p {
-    font-size: 1.15rem;
+  
+  .icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
   }
-
-  .wellness-image {
-    max-height: 235px;
+  
+  .familiar-item p {
+    font-size: 1rem;
   }
-
-  .freebie-section {
-    padding: 40px 15px;
+  
+  .jamie {
+    padding: 35px 20px;
   }
-
-  .freebie-content {
-    gap: 30px;
+  
+  .jamie-text h2 {
+    font-size: 2.2rem;
   }
-
-  .freebie-image {
-    max-height: 332px;
+  
+  .jamie-text p {
+    font-size: 1.1rem;
   }
-
-  .freebie-text {
-    align-items: center;
-    text-align: left;
-    padding: 25px 15px 25px 10px;
+  
+  .guide,
+  .help {
+    padding: 35px 20px;
   }
-
-  .freebie-text h2 {
-    font-size: 2.4rem;
-    margin-bottom: 12px;
+  
+  .guide h2,
+  .help h2 {
+    font-size: 2rem;
   }
-
-  .freebie-text p {
-    font-size: 1.15rem;
+  
+  .help-left p {
+    font-size: 1.05rem;
   }
-
-  .freebie-form {
-    max-width: 360px;
-    align-items: center;
-    align-self: center;
-  }
-
-  .email-input, .download-btn {
-    padding: 14px 18px;
-    font-size: 0.95rem;
-  }
-
-  .download-btn {
-    align-self: center;
-    width: auto;
-  }
-
-  .email-input {
-    border-radius: 8px;
-    width: 85%;
-    max-width: 320px;
-    align-self: center;
+  
+  .help-right li {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .site-header {
-    padding: 10px 12px;
-  }
-  
-  .hero-section {
-    padding: 70px 15px 30px 15px;
-  }
-  
-  .hero-content {
-    margin-top: 20px;
-  }
-  
-  .hero-image-container {
-    width: 240px;
-    height: 310px;
-  }
-  
-  .back-card {
-    width: 220px;
-    height: 290px;
-  }
-  
-  .front-card {
-    width: 189px;
-    height: 263px;
-    top: 15px;
-  }
-  
-  .hero-text h1 {
+  .hero-content h1 {
     font-size: 2.2rem;
   }
   
-  .hero-text p {
+  .hero-subtitle {
     font-size: 1.1rem;
   }
   
-  .wellness-section {
-    padding: 30px 10px;
+  .familiar h2 {
+    font-size: 1.8rem;
   }
-
-  .wellness-content {
-    gap: 25px;
+  
+  .icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
   }
-
-  .wellness-text h2 {
-    font-size: 2.1rem;
+  
+  .jamie-text h2 {
+    font-size: 2rem;
   }
-
-  .wellness-text p {
-    font-size: 1.1rem;
-  }
-
-  .wellness-image {
-    max-height: 200px;
-  }
-
-  .freebie-section {
-    padding: 30px 10px;
-  }
-
-  .freebie-content {
-    gap: 25px;
-  }
-
-  .freebie-image {
-    max-height: 277px;
-  }
-
-  .freebie-text {
-    align-items: center;
-    text-align: left;
-    padding: 20px 15px 20px 10px;
-  }
-
-  .freebie-text h2 {
-    font-size: 2.1rem;
-    margin-bottom: 10px;
-  }
-
-  .freebie-text p {
-    font-size: 1.1rem;
-  }
-
-  .freebie-form {
-    max-width: 315px;
-    align-items: center;
-    align-self: center;
-  }
-
-  .email-input, .download-btn {
-    padding: 12px 16px;
-    font-size: 0.9rem;
-  }
-
-  .download-btn {
-    align-self: center;
-    width: auto;
-  }
-
-  .email-input {
-    width: 80%;
-    max-width: 280px;
-    align-self: center;
+  
+  .guide h2,
+  .help h2 {
+    font-size: 1.8rem;
   }
 }

@@ -15,166 +15,114 @@
     gtag('js', new Date());
     gtag('config', 'G-002J8VYT3K');
   </script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo-container">
-      <a href="#" class="logo-link">
-        <img src="static/logo.png" alt="Balance With Jamie Logo" class="site-logo">
-      </a>
-    </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#wellness">My Approach</a></li>
-        <li><a href="#freebie">Freebie</a></li>
-        <li><a href="https://calendly.com/balancewithjamie/30-minutes">Connect</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
-
-  <nav class="mobile-nav">
-    <ul>
-      <li><a href="#wellness">My Approach</a></li>
-      <li><a href="#freebie">Freebie</a></li>
-      <li><a href="https://calendly.com/balancewithjamie/30-minutes">Connect</a></li>
-    </ul>
-  </nav>
-
-  <main class="hero-section">
-    <div class="hero-content">
-      <div class="hero-image-container">
-        <div class="card-stack">
-          <div class="back-card"></div>
-          <div class="front-card">
-            <img src="static/profile.jpeg" alt="Jamie Profile" class="hero-profile-img">
-          </div>
+  <!-- First Section: Hero + Does this sound familiar -->
+  <section class="section-one">
+    <div class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Finding Balance After a Lupus Diagnosis</h1>
+          <p class="hero-subtitle">Lifestyle support designed for people living with lupus.</p>
+          <a href="https://calendly.com/balancewithjamie/30-minutes" class="cta-button">Start Your Journey</a>
+          <p class="hero-footnote">Find clarity and support for your lupus today.</p>
         </div>
       </div>
-      <div class="hero-text">
-        <h1>Finding Balance After A Lupus Diagnosis</h1>
-        <p>You don't have to face this journey alone. I'm here to help you understand your diagnosis, manage your symptoms, and find balance in your everyday life.</p>
-        <a href="#wellness" class="hero-btn">Learn More</a>
+      <div class="wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,0 C480,100 960,100 1440,0 L1440,120 L0,120 Z" fill="#f5f3f0"/>
+        </svg>
       </div>
     </div>
-  </main>
-  <section class="wellness-section" id="wellness">
-    <div class="wellness-content">
-      <div class="wellness-text">
-        <h2>From Pain to <em>Purpose</em></h2>
-        <p>As a nurse and health coach living with lupus, I know firsthand how challenging this journey can be - the fatigue, the flare-ups, the uncertainty.</p>
-        <br>
-        <p><em>That's why I created this space - to guide you with gentle, practical strategies that help you care for both your body and mind.</em></p>
-        <br>
-        <p>Real change comes from the small, intentional choices made each day. With every step, you open the door for healing and build a foundation for lasting wellness.</p>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div class="wellness-image-container">
-        <img src="static/wellness.jpg" alt="Wellness Image" class="wellness-image">
-      </div>
-    </div>
-  </section>
-  <section class="freebie-section" id="freebie">
-    <div class="freebie-content">
-      <div class="freebie-image-container">
-        <img src="static/freebie.png" alt="Free Wellness Guide" class="freebie-image">
-      </div>
-      <div class="freebie-text">
-        <h2>Simple Steps For Daily Wellness</h2>
-        <p>A practical guide to navigating life with lupus. Discover small daily habits to care for your well-being and feel encouraged as you take your first steps on this journey.</p>
-        <form class="freebie-form" id="wellness-tracker-form">
-          <input type="email" name="user_email" id="user_email" placeholder="Email Address" class="email-input" required>
-          <button type="submit" class="download-btn" id="submit-btn">Get Your Free Guide!</button>
-          <div id="form-status" class="response" style="display:none;"></div>
-        </form>
-        <br>
-        <br>
+    
+    <div class="familiar">
+      <h2>Does this sound familiar?</h2>
+      <div class="familiar-grid">
+        <div class="familiar-item">
+          <div class="icon">🧠</div>
+          <p>You look "fine" on the outside, but inside you're managing pain, fatigue, and brain fog.</p>
+        </div>
+        <div class="familiar-item">
+          <div class="icon">💚</div>
+          <p>You want to feel more balanced and calm in your daily life.</p>
+        </div>
+        <div class="familiar-item">
+          <div class="icon">😰</div>
+          <p>Your symptoms make even simple tasks feel exhausting.</p>
+        </div>
+        <div class="familiar-item">
+          <div class="icon">📋</div>
+          <p>You need guidance that's realistic and personalized for you.</p>
+        </div>
+        <div class="familiar-item">
+          <div class="icon">🤷</div>
+          <p>You're overwhelmed by conflicting advice and unsure what works for your body.</p>
+        </div>
+        <div class="familiar-item">
+          <div class="icon">🙋‍♀️</div>
+          <p>You want to be heard and supported by someone who understands.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <script>
-    // Hamburger menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const mobileNav = document.querySelector('.mobile-nav');
-        
-        // Toggle functionality
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on links
-        const mobileLinks = mobileNav.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-            }
-        });
-    });
+  <!-- Second Section: Jamie + Guide + Help -->
+  <section class="section-two">
+    <div class="jamie">
+      <div class="jamie-content">
+        <div class="jamie-image">
+          <img src="static/profile.jpeg" alt="Jamie">
+        </div>
+        <div class="jamie-text">
+          <h2>Hi, I'm <em>Jamie</em>,</h2>
+          <p>I'm a registered nurse and board-certified health & wellness coach living with lupus too.</p>
+          <p>I take a lifestyle-based approach that complements your medical care, helping you find balance and manage your symptoms with compassion and understanding.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider-jamie">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,0 C480,100 960,100 1440,0 L1440,120 L0,120 Z" fill="#fff"/>
+      </svg>
+    </div>
 
-    // EmailJS functionality
-    (function() {
-        emailjs.init("CklLL1WUpc6TzPzeO");
-        
-        document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const btn = document.getElementById('submit-btn');
-            const statusDiv = document.getElementById('form-status');
-            const originalBtnText = btn.textContent;
-            
-            btn.disabled = true;
-            btn.textContent = "Sending...";
-            statusDiv.style.display = "block";
-            statusDiv.textContent = "Sending your wellness guide...";
-            statusDiv.className = "response";
-            
-            const emailValue = document.getElementById('user_email').value;
-            
-            const templateParams = {
-                to_email: emailValue,
-            };
-            
-            emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
-                .then(function() {
-                    statusDiv.textContent = "Your wellness guide is on its way!";
-                    statusDiv.className = "response success-response";
-                    btn.textContent = "Sent!";
-                    document.getElementById('wellness-tracker-form').reset();
-                    
-                    setTimeout(function() {
-                        btn.disabled = false;
-                        btn.textContent = originalBtnText;
-                    }, 3000);
-                })
-                .catch(function(error) {
-                    console.error("EmailJS error:", error);
-                    statusDiv.textContent = "Please try again later.";
-                    statusDiv.className = "response error-response";
-                    
-                    btn.disabled = false;
-                    btn.textContent = originalBtnText;
-                });
-        });
-    })();
-  </script>
+    <div class="guide">
+      <div class="guide-content">
+        <div class="guide-text">
+          <h2>Free Guide: Food as Medicine</h2>
+          <p class="guide-subtitle">Learn how to calm inflammation and support your well-being with healing foods.</p>
+          <a href="#" class="guide-button">Get Your Free Guide</a>
+        </div>
+        <div class="guide-image-container">
+          <img src="static/freebie.png" alt="Free Guide" class="guide-image">
+        </div>
+      </div>
+    </div>
+    <div class="wave-divider-guide">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,0 C480,100 960,100 1440,0 L1440,120 L0,120 Z" fill="#f5f3f0"/>
+      </svg>
+    </div>
+
+    <div class="help">
+      <h2>How I Can Help</h2>
+      <div class="help-grid">
+        <div class="help-left">
+          <p>Support looks different for everyone with lupus.</p>
+          <p>Some people just need one conversation to find clarity and feel grounded.</p>
+          <p>Others benefit <em>from ongoing guidance</em> through flares and stress.</p>
+        </div>
+        <div class="help-right">
+          <ul>
+            <li>Discuss your current challenges</li>
+            <li>Identify your goals and what matters most</li>
+            <li>Explore what support feels right for you</li>
+          </ul>
+          <a href="https://calendly.com/balancewithjamie/30-minutes" class="chat-btn">Let's Chat</a>
+          <p class="help-note">No pressure, just a friendly conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
