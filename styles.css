@@ -345,7 +345,7 @@ body {
 }
 
 .guide-image {
-  max-width: 63%;
+  max-width: 51%;
   height: auto;
   object-fit: contain;
 }
