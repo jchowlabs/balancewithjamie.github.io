@@ -338,6 +338,8 @@ body {
   text-align: center;
   transition: border-color 0.3s ease;
   font-family: 'Montserrat', sans-serif;
+  color: #666;
+  font-weight: 400;
 }
 
 .email-input:focus {
@@ -347,6 +349,7 @@ body {
 
 .email-input::placeholder {
   color: #bbb;
+  font-style: italic;
 }
 
 .response {
