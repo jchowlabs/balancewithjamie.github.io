@@ -169,6 +169,14 @@ body {
   margin-bottom: -40px;
 }
 
+/* Desktop two-column ordering */
+.familiar-item[data-order="1"] { order: 1; }
+.familiar-item[data-order="2"] { order: 2; }
+.familiar-item[data-order="3"] { order: 3; }
+.familiar-item[data-order="4"] { order: 4; }
+.familiar-item[data-order="5"] { order: 5; }
+.familiar-item[data-order="6"] { order: 6; }
+
 .icon {
   font-size: 2.2rem;
   flex-shrink: 0;
@@ -632,6 +640,14 @@ body {
   .familiar-item {
     margin-bottom: 0;
   }
+  
+  /* Reset order for single column mobile view */
+  .familiar-item[data-order="1"] { order: 1; }
+  .familiar-item[data-order="2"] { order: 4; }
+  .familiar-item[data-order="3"] { order: 2; }
+  .familiar-item[data-order="4"] { order: 5; }
+  .familiar-item[data-order="5"] { order: 3; }
+  .familiar-item[data-order="6"] { order: 6; }
   
   .jamie {
     grid-template-columns: 1fr;
