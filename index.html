@@ -15,6 +15,7 @@
     gtag('js', new Date());
     gtag('config', 'G-002J8VYT3K');
   </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -90,7 +91,11 @@
         <div class="guide-text">
           <h2>Grab Your Free Guide</h2>
           <p class="guide-subtitle">Discover how simple food choices and daily habits can support your body and overall well-being.</p>
-          <a href="#" class="guide-button">Download Now</a>
+          <form class="guide-form" id="wellness-tracker-form">
+            <input type="email" name="user_email" id="user_email" placeholder="Email Address" class="email-input" required>
+            <button type="submit" class="guide-button" id="submit-btn">Download Now</button>
+            <div id="form-status" class="response" style="display:none;"></div>
+          </form>
         </div>
         <div class="guide-image-container">
           <img src="static/freebie.png" alt="Free Guide" class="guide-image">
@@ -109,7 +114,7 @@
         <div class="help-left">
           <p>Support looks different for everyone with lupus.</p>
           <p>Some people need a <em>single conversation</em> to get clarity and feel grounded again.</p>
-          <p>Others benefit from <em>ongoing guidance</em> as they navigate flares or light changes.</p>
+          <p>Others benefit from <em>ongoing guidance</em> as they navigate flares or life changes.</p>
         </div>
         <div class="help-right">
           <p class="help-intro">During this introductory call, we'll take time to:</p>
@@ -123,5 +128,53 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // EmailJS functionality
+    (function() {
+        emailjs.init("CklLL1WUpc6TzPzeO");
+        
+        document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const btn = document.getElementById('submit-btn');
+            const statusDiv = document.getElementById('form-status');
+            const originalBtnText = btn.textContent;
+            
+            btn.disabled = true;
+            btn.textContent = "Sending...";
+            statusDiv.style.display = "block";
+            statusDiv.textContent = "Sending your wellness guide...";
+            statusDiv.className = "response";
+            
+            const emailValue = document.getElementById('user_email').value;
+            
+            const templateParams = {
+                to_email: emailValue,
+            };
+            
+            emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
+                .then(function() {
+                    statusDiv.textContent = "Your wellness guide is on its way!";
+                    statusDiv.className = "response success-response";
+                    btn.textContent = "Sent!";
+                    document.getElementById('wellness-tracker-form').reset();
+                    
+                    setTimeout(function() {
+                        btn.disabled = false;
+                        btn.textContent = originalBtnText;
+                    }, 3000);
+                })
+                .catch(function(error) {
+                    console.error("EmailJS error:", error);
+                    statusDiv.textContent = "Please try again later.";
+                    statusDiv.className = "response error-response";
+                    
+                    btn.disabled = false;
+                    btn.textContent = originalBtnText;
+                });
+        });
+    })();
+  </script>
 </body>
 </html>
