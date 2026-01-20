@@ -138,14 +138,10 @@
             event.preventDefault();
             
             const btn = document.getElementById('submit-btn');
-            const statusDiv = document.getElementById('form-status');
             const originalBtnText = btn.textContent;
             
             btn.disabled = true;
             btn.textContent = "Sending...";
-            statusDiv.style.display = "block";
-            statusDiv.textContent = "Sending your wellness guide...";
-            statusDiv.className = "response";
             
             const emailValue = document.getElementById('user_email').value;
             
@@ -155,8 +151,6 @@
             
             emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
                 .then(function() {
-                    statusDiv.textContent = "Your wellness guide is on its way!";
-                    statusDiv.className = "response success-response";
                     btn.textContent = "Sent!";
                     document.getElementById('wellness-tracker-form').reset();
                     
@@ -167,8 +161,6 @@
                 })
                 .catch(function(error) {
                     console.error("EmailJS error:", error);
-                    statusDiv.textContent = "Please try again later.";
-                    statusDiv.className = "response error-response";
                     
                     btn.disabled = false;
                     btn.textContent = originalBtnText;
