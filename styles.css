@@ -630,13 +630,14 @@ body {
   
   .jamie {
     grid-template-columns: 1fr;
-    padding: 40px 30px;
+    padding: 40px 20px;
     gap: 35px;
     text-align: center;
   }
   
   .jamie-content {
     grid-template-columns: 1fr;
+    padding: 0 10px;
   }
   
   .jamie-image {
@@ -701,7 +702,12 @@ body {
     display: none;
   }
   
-  .help-left,
+  .help-left {
+    text-align: center;
+    padding-bottom: 35px;
+    border-bottom: 2px solid #d4d4d4;
+  }
+  
   .help-right {
     text-align: center;
   }
@@ -746,7 +752,11 @@ body {
   }
   
   .jamie {
-    padding: 35px 20px;
+    padding: 35px 15px;
+  }
+  
+  .jamie-content {
+    padding: 0 5px;
   }
   
   .jamie-text h2 {
