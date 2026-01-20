@@ -629,6 +629,10 @@ body {
     display: none;
   }
   
+  .familiar-item {
+    margin-bottom: 0;
+  }
+  
   .jamie {
     grid-template-columns: 1fr;
     padding: 40px 20px;
