@@ -612,6 +612,8 @@ body {
   
   .hero-subtitle {
     font-size: 1.3rem;
+    font-weight: 500;
+    color: #4d4d4d;
   }
   
   .familiar {
@@ -705,6 +707,9 @@ body {
   .guide h2,
   .help h2 {
     font-size: 2.2rem;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
   }
   
   .guide h2::before,
