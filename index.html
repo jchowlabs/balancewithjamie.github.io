@@ -16,8 +16,6 @@
     gtag('config', 'G-002J8VYT3K');
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <!-- Google reCAPTCHA (v2 checkbox). If your key is managed in Google Cloud Console (Enterprise), use enterprise.js. -->
-  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -139,11 +137,6 @@
         <input type="email" id="free_guide_email" name="user_email" class="modal__input" placeholder="Email Address" autocomplete="email">
         <div class="modal__field-error" id="free-guide-email-error" aria-live="polite"></div>
 
-        <!-- IMPORTANT: Replace data-sitekey with your Google reCAPTCHA site key -->
-        <div class="modal__captcha">
-          <div class="g-recaptcha" data-sitekey="бLeNRIMSAAAAAAqhMV2jzl_Eu7QAGO7UGМРее3L8"></div>
-        </div>
-
         <div class="modal__response" id="free-guide-modal-response" aria-live="polite"></div>
         <button type="submit" class="modal__button" id="free-guide-submit-btn">Download Now</button>
       </form>
@@ -184,34 +177,6 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
       };
 
-      const getCaptchaResponse = () => {
-        try {
-          if (window.grecaptcha && window.grecaptcha.enterprise && typeof window.grecaptcha.enterprise.getResponse === 'function') {
-            return window.grecaptcha.enterprise.getResponse() || '';
-          }
-          if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
-            return window.grecaptcha.getResponse() || '';
-          }
-        } catch (e) {
-          // ignore
-        }
-        return '';
-      };
-
-      const resetCaptcha = () => {
-        try {
-          if (window.grecaptcha && window.grecaptcha.enterprise && typeof window.grecaptcha.enterprise.reset === 'function') {
-            window.grecaptcha.enterprise.reset();
-            return;
-          }
-          if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') {
-            window.grecaptcha.reset();
-          }
-        } catch (e) {
-          // ignore
-        }
-      };
-
       const openModal = () => {
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
@@ -228,7 +193,6 @@
         modalForm.reset();
         setResponse('', '');
         setEmailError('');
-        resetCaptcha();
       };
 
       openBtn.addEventListener('click', openModal);
@@ -262,21 +226,12 @@
           return;
         }
 
-        let captchaToken = '';
-        captchaToken = getCaptchaResponse();
-
-        if (!captchaToken) {
-          setResponse("Please confirm you're not a robot.", 'error');
-          return;
-        }
-
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         setResponse('', '');
 
         const templateParams = {
           to_email: emailValue,
-          captcha_token: captchaToken,
         };
 
         emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
