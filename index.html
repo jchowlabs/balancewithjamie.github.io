@@ -16,8 +16,8 @@
     gtag('config', 'G-002J8VYT3K');
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <!-- Google reCAPTCHA (v2 checkbox) -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Google reCAPTCHA (v2 checkbox). If your key is managed in Google Cloud Console (Enterprise), use enterprise.js. -->
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -184,6 +184,34 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
       };
 
+      const getCaptchaResponse = () => {
+        try {
+          if (window.grecaptcha && window.grecaptcha.enterprise && typeof window.grecaptcha.enterprise.getResponse === 'function') {
+            return window.grecaptcha.enterprise.getResponse() || '';
+          }
+          if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
+            return window.grecaptcha.getResponse() || '';
+          }
+        } catch (e) {
+          // ignore
+        }
+        return '';
+      };
+
+      const resetCaptcha = () => {
+        try {
+          if (window.grecaptcha && window.grecaptcha.enterprise && typeof window.grecaptcha.enterprise.reset === 'function') {
+            window.grecaptcha.enterprise.reset();
+            return;
+          }
+          if (window.grecaptcha && typeof window.grecaptcha.reset === 'function') {
+            window.grecaptcha.reset();
+          }
+        } catch (e) {
+          // ignore
+        }
+      };
+
       const openModal = () => {
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
@@ -200,13 +228,7 @@
         modalForm.reset();
         setResponse('', '');
         setEmailError('');
-        try {
-          if (window.grecaptcha) {
-            window.grecaptcha.reset();
-          }
-        } catch (e) {
-          // ignore
-        }
+        resetCaptcha();
       };
 
       openBtn.addEventListener('click', openModal);
@@ -241,13 +263,7 @@
         }
 
         let captchaToken = '';
-        try {
-          if (window.grecaptcha) {
-            captchaToken = window.grecaptcha.getResponse();
-          }
-        } catch (e) {
-          captchaToken = '';
-        }
+        captchaToken = getCaptchaResponse();
 
         if (!captchaToken) {
           setResponse("Please confirm you're not a robot.", 'error');
