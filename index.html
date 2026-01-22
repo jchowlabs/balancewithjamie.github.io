@@ -16,6 +16,8 @@
     gtag('config', 'G-002J8VYT3K');
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- Google reCAPTCHA (v2 checkbox) -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -91,10 +93,9 @@
         <div class="guide-text">
           <h2>Grab Your Free Guide</h2>
           <p class="guide-subtitle">Discover how simple food choices and daily habits can support your body and overall well-being.</p>
-          <form class="guide-form" id="wellness-tracker-form">
-            <input type="email" name="user_email" id="user_email" placeholder="Email Address" class="email-input" required>
-            <button type="submit" class="guide-button" id="submit-btn">Download Now</button>
-          </form>
+          <div class="guide-form">
+            <button type="button" class="guide-button" id="open-guide-modal">Download Now</button>
+          </div>
         </div>
         <div class="guide-image-container">
           <img src="static/freebie.png" alt="Free Guide" class="guide-image">
@@ -128,43 +129,158 @@
     </div>
   </section>
 
+  <!-- Free Guide Modal -->
+  <div class="modal" id="free-guide-modal" aria-hidden="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="free-guide-modal-title">
+      <button class="modal__close" type="button" aria-label="Close" data-modal-close>&times;</button>
+      <h3 class="modal__title" id="free-guide-modal-title">Free Guide</h3>
+      <form class="modal__form" id="free-guide-modal-form" novalidate>
+        <input type="email" id="free_guide_email" name="user_email" class="modal__input" placeholder="Email Address" autocomplete="email">
+        <div class="modal__field-error" id="free-guide-email-error" aria-live="polite"></div>
+
+        <!-- IMPORTANT: Replace data-sitekey with your Google reCAPTCHA site key -->
+        <div class="modal__captcha">
+          <div class="g-recaptcha" data-sitekey="6LeNRIMsAAAAAAqhMV2jzI_Eu7QAGO7UGMPee3L8"></div>
+        </div>
+
+        <div class="modal__response" id="free-guide-modal-response" aria-live="polite"></div>
+        <button type="submit" class="modal__button" id="free-guide-submit-btn">Download Now</button>
+      </form>
+    </div>
+  </div>
+
   <script>
     // EmailJS functionality
     (function() {
-        emailjs.init("CklLL1WUpc6TzPzeO");
-        
-        document.getElementById('wellness-tracker-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const btn = document.getElementById('submit-btn');
-            const originalBtnText = btn.textContent;
-            
-            btn.disabled = true;
-            btn.textContent = "Sending...";
-            
-            const emailValue = document.getElementById('user_email').value;
-            
-            const templateParams = {
-                to_email: emailValue,
-            };
-            
-            emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
-                .then(function() {
-                    btn.textContent = "Sent!";
-                    document.getElementById('wellness-tracker-form').reset();
-                    
-                    setTimeout(function() {
-                        btn.disabled = false;
-                        btn.textContent = originalBtnText;
-                    }, 3000);
-                })
-                .catch(function(error) {
-                    console.error("EmailJS error:", error);
-                    
-                    btn.disabled = false;
-                    btn.textContent = originalBtnText;
-                });
-        });
+      emailjs.init("CklLL1WUpc6TzPzeO");
+
+      const openBtn = document.getElementById('open-guide-modal');
+      const modal = document.getElementById('free-guide-modal');
+      const modalForm = document.getElementById('free-guide-modal-form');
+      const emailInput = document.getElementById('free_guide_email');
+      const emailErrorEl = document.getElementById('free-guide-email-error');
+      const responseEl = document.getElementById('free-guide-modal-response');
+      const submitBtn = document.getElementById('free-guide-submit-btn');
+
+      if (!openBtn || !modal || !modalForm || !emailInput || !submitBtn) {
+        return;
+      }
+
+      const setResponse = (message, kind) => {
+        if (!responseEl) return;
+        responseEl.textContent = message || '';
+        responseEl.dataset.kind = kind || '';
+      };
+
+      const setEmailError = (message) => {
+        if (!emailErrorEl) return;
+        emailErrorEl.textContent = message || '';
+      };
+
+      const isValidEmail = (value) => {
+        const v = (value || '').trim();
+        // Pragmatic email check: good UX without native tooltips.
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+      };
+
+      const openModal = () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        setResponse('', '');
+        setEmailError('');
+        emailInput.focus();
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        modalForm.reset();
+        setResponse('', '');
+        setEmailError('');
+        try {
+          if (window.grecaptcha) {
+            window.grecaptcha.reset();
+          }
+        } catch (e) {
+          // ignore
+        }
+      };
+
+      openBtn.addEventListener('click', openModal);
+
+      modal.addEventListener('click', function(e) {
+        const target = e.target;
+        if (target && target.closest && target.closest('[data-modal-close]')) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+
+      emailInput.addEventListener('input', function() {
+        setEmailError('');
+      });
+
+      modalForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const originalBtnText = submitBtn.textContent;
+        const emailValue = (emailInput.value || '').trim();
+
+        if (!isValidEmail(emailValue)) {
+          setEmailError('Please enter valid email.');
+          emailInput.focus();
+          return;
+        }
+
+        let captchaToken = '';
+        try {
+          if (window.grecaptcha) {
+            captchaToken = window.grecaptcha.getResponse();
+          }
+        } catch (e) {
+          captchaToken = '';
+        }
+
+        if (!captchaToken) {
+          setResponse("Please confirm you're not a robot.", 'error');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        setResponse('', '');
+
+        const templateParams = {
+          to_email: emailValue,
+          captcha_token: captchaToken,
+        };
+
+        emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)
+          .then(function() {
+            submitBtn.textContent = 'Sent!';
+            setResponse('Check your inbox for the guide.', 'success');
+
+            setTimeout(function() {
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalBtnText;
+              closeModal();
+            }, 2000);
+          })
+          .catch(function(error) {
+            console.error("EmailJS error:", error);
+            setResponse('Something went wrong. Please try again.', 'error');
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          });
+      });
     })();
   </script>
 </body>
