@@ -16,6 +16,8 @@
     gtag('config', 'G-002J8VYT3K');
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- Cloudflare Turnstile (bot protection) -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -137,6 +139,10 @@
         <input type="email" id="free_guide_email" name="user_email" class="modal__input" placeholder="Email Address" autocomplete="email">
         <div class="modal__field-error" id="free-guide-email-error" aria-live="polite"></div>
 
+        <div class="modal__turnstile" aria-label="Security check">
+          <div id="cf-turnstile"></div>
+        </div>
+
         <div class="modal__response" id="free-guide-modal-response" aria-live="polite"></div>
         <button type="submit" class="modal__button" id="free-guide-submit-btn">Download Now</button>
       </form>
@@ -148,6 +154,11 @@
     (function() {
       emailjs.init("CklLL1WUpc6TzPzeO");
 
+      // Cloudflare Turnstile (client-side gating only; real protection requires server-side verification)
+      const TURNSTILE_SITEKEY = '0x4AAAAAAACOP_zPQA-6E3XzY';
+      let turnstileWidgetId = null;
+      let turnstileToken = '';
+
       const openBtn = document.getElementById('open-guide-modal');
       const modal = document.getElementById('free-guide-modal');
       const modalForm = document.getElementById('free-guide-modal-form');
@@ -155,6 +166,7 @@
       const emailErrorEl = document.getElementById('free-guide-email-error');
       const responseEl = document.getElementById('free-guide-modal-response');
       const submitBtn = document.getElementById('free-guide-submit-btn');
+      const turnstileContainer = document.getElementById('cf-turnstile');
 
       if (!openBtn || !modal || !modalForm || !emailInput || !submitBtn) {
         return;
@@ -177,12 +189,80 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
       };
 
+      const renderTurnstile = () => {
+        if (!turnstileContainer) return;
+        if (turnstileWidgetId !== null) return;
+
+        if (!window.turnstile || typeof window.turnstile.render !== 'function') {
+          // Script may still be loading.
+          return;
+        }
+
+        // Ensure container is empty before rendering.
+        turnstileContainer.innerHTML = '';
+
+        turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+          sitekey: TURNSTILE_SITEKEY,
+          callback: function(token) {
+            turnstileToken = token || '';
+            if (turnstileToken) setResponse('', '');
+          },
+          'expired-callback': function() {
+            turnstileToken = '';
+          },
+          'error-callback': function() {
+            turnstileToken = '';
+            setResponse('Security check failed to load. Please try again.', 'error');
+          },
+        });
+      };
+
+      const ensureTurnstileRendered = () => {
+        // Prefer Turnstile's readiness hook when available.
+        if (window.turnstile && typeof window.turnstile.ready === 'function') {
+          window.turnstile.ready(() => {
+            renderTurnstile();
+          });
+        }
+
+        // Render immediately if possible; otherwise retry for a bit longer.
+        renderTurnstile();
+        if (turnstileWidgetId !== null) return;
+
+        let tries = 0;
+        const maxTries = 100; // ~10s
+        const timer = setInterval(() => {
+          tries += 1;
+          renderTurnstile();
+          if (turnstileWidgetId !== null) {
+            clearInterval(timer);
+            return;
+          }
+          if (tries >= maxTries) {
+            clearInterval(timer);
+            setResponse('Security check did not load. Please disable any ad blockers/privacy extensions and refresh.', 'error');
+          }
+        }, 100);
+      };
+
+      const resetTurnstile = () => {
+        turnstileToken = '';
+        try {
+          if (window.turnstile && typeof window.turnstile.reset === 'function' && turnstileWidgetId !== null) {
+            window.turnstile.reset(turnstileWidgetId);
+          }
+        } catch (e) {
+          // ignore
+        }
+      };
+
       const openModal = () => {
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('modal-open');
         setResponse('', '');
         setEmailError('');
+        ensureTurnstileRendered();
         emailInput.focus();
       };
 
@@ -193,6 +273,7 @@
         modalForm.reset();
         setResponse('', '');
         setEmailError('');
+        resetTurnstile();
       };
 
       openBtn.addEventListener('click', openModal);
@@ -226,12 +307,18 @@
           return;
         }
 
+        if (!turnstileToken) {
+          setResponse('Please complete the security check.', 'error');
+          return;
+        }
+
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
         setResponse('', '');
 
         const templateParams = {
           to_email: emailValue,
+          turnstile_token: turnstileToken,
         };
 
         emailjs.send("service_85kpvne", "template_pgz6itn", templateParams)

@@ -510,6 +510,13 @@ body.modal-open {
   text-align: left;
 }
 
+.modal__turnstile {
+  display: flex;
+  justify-content: center;
+  padding: 2px 0 0 0;
+  width: min(var(--modal-field-width, 304px), 100%);
+}
+
 .modal__response {
   width: min(var(--modal-field-width, 304px), 100%);
   min-height: 14px;
