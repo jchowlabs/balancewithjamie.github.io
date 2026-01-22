@@ -707,6 +707,9 @@ body {
   .guide h2,
   .help h2 {
     font-size: 2.2rem;
+  }
+
+  .help h2 {
     justify-content: center;
     text-align: center;
     margin-left: 0;
