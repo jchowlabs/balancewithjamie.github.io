@@ -203,8 +203,6 @@
 
         turnstileWidgetId = window.turnstile.render(turnstileContainer, {
           sitekey: TURNSTILE_SITEKEY,
-          appearance: 'always',
-          size: 'normal',
           callback: function(token) {
             turnstileToken = token || '';
             if (turnstileToken) setResponse('', '');
@@ -212,9 +210,11 @@
           'expired-callback': function() {
             turnstileToken = '';
           },
-          'error-callback': function() {
+          'error-callback': function(errorCode) {
             turnstileToken = '';
-            setResponse('Security check failed to load. Please try again.', 'error');
+            // Returning true tells Turnstile we handled the error (prevents extra console noise).
+            setResponse('Security check failed to load (code ' + (errorCode || 'unknown') + '). Please refresh and try again.', 'error');
+            return true;
           },
         });
       };
