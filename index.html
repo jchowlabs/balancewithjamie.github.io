@@ -17,7 +17,7 @@
   </script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <!-- Cloudflare Turnstile (bot protection) -->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
 </head>
 <body>
   <!-- First Section: Hero + Does this sound familiar -->
@@ -203,6 +203,8 @@
 
         turnstileWidgetId = window.turnstile.render(turnstileContainer, {
           sitekey: TURNSTILE_SITEKEY,
+          appearance: 'always',
+          size: 'normal',
           callback: function(token) {
             turnstileToken = token || '';
             if (turnstileToken) setResponse('', '');
@@ -218,13 +220,6 @@
       };
 
       const ensureTurnstileRendered = () => {
-        // Prefer Turnstile's readiness hook when available.
-        if (window.turnstile && typeof window.turnstile.ready === 'function') {
-          window.turnstile.ready(() => {
-            renderTurnstile();
-          });
-        }
-
         // Render immediately if possible; otherwise retry for a bit longer.
         renderTurnstile();
         if (turnstileWidgetId !== null) return;
